@@ -27,7 +27,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Generate Asia report
+      - name: Generate NY report
         run: python main.py generate asia
 
       - name: Send Telegram notification
