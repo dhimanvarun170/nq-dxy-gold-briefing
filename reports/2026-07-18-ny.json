@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "session": "ny",
+    "session_label": "NY Pre-Session",
+    "session_window_utc": "12:00-21:00",
+    "generated_at_utc": "2026-07-18T14:47:37.118329+00:00",
+    "generated_at_display_tz": "2026-07-18T20:17:37.118329+05:30",
+    "display_timezone": "Asia/Kolkata"
+  },
+  "macro": {
+    "ok": true,
+    "reason": null,
+    "high_impact_next_window": [],
+    "all_upcoming_next_window": [],
+    "window_hours": 24
+  },
+  "instruments": {
+    "NQ": {
+      "ok": true,
+      "ticker_used": "NQ=F",
+      "last_price": 28773.25,
+      "prior_day_high": 29797.0,
+      "prior_day_low": 29078.5,
+      "prior_day_close": 29225.75,
+      "pct_change_vs_prior_close": -1.5482921738535367,
+      "htf_trend_ema8_vs_ema21": "down",
+      "swing_high_liquidity_pool": 29050.25,
+      "swing_low_liquidity_pool": 28408.25,
+      "fair_value_gaps": {
+        "bullish_fvg": {
+          "gap_low": 28956.0,
+          "gap_high": 28960.5
+        },
+        "bearish_fvg": {
+          "gap_low": 28754.5,
+          "gap_high": 28756.0
+        }
+      },
+      "bias": "bearish",
+      "gamma_data": {
+        "available": false,
+        "note": "No manual gamma/options data provided for this run (no free API exists for call/put walls, gamma flip, net GEX, max pain, or OI). Bias below is price-action-only. Paste your morning data into data/manual_overrides.json to layer it in."
+      }
+    },
+    "DXY": {
+      "ok": true,
+      "ticker_used": "DX-Y.NYB",
+      "last_price": 100.75499725341797,
+      "prior_day_high": 100.83000183105469,
+      "prior_day_low": 100.44000244140625,
+      "prior_day_close": 100.7300033569336,
+      "pct_change_vs_prior_close": 0.024812762485284464,
+      "htf_trend_ema8_vs_ema21": "down",
+      "swing_high_liquidity_pool": 100.86699676513672,
+      "swing_low_liquidity_pool": 100.7040023803711,
+      "fair_value_gaps": {
+        "bullish_fvg": {
+          "gap_low": 100.74400329589844,
+          "gap_high": 100.75399780273438
+        },
+        "bearish_fvg": {
+          "gap_low": 100.74400329589844,
+          "gap_high": 100.74600219726562
+        }
+      },
+      "bias": "neutral",
+      "gamma_data": {
+        "available": false,
+        "note": "DXY has no reliable options/gamma chain (thin ICE DX options market) - price action + macro/news only, by design."
+      }
+    },
+    "GC": {
+      "ok": true,
+      "ticker_used": "GC=F",
+      "last_price": 4018.800048828125,
+      "prior_day_high": 4030.5,
+      "prior_day_low": 3972.60009765625,
+      "prior_day_close": 3985.60009765625,
+      "pct_change_vs_prior_close": 0.8329975501405266,
+      "htf_trend_ema8_vs_ema21": "down",
+      "swing_high_liquidity_pool": 4028.89990234375,
+      "swing_low_liquidity_pool": 3963.0,
+      "fair_value_gaps": {
+        "bullish_fvg": {
+          "gap_low": 4017.10009765625,
+          "gap_high": 4017.5
+        },
+        "bearish_fvg": {
+          "gap_low": 4011.300048828125,
+          "gap_high": 4011.60009765625
+        }
+      },
+      "bias": "neutral",
+      "gamma_data": {
+        "available": false,
+        "note": "No manual gamma/options data provided for this run (no free API exists for call/put walls, gamma flip, net GEX, max pain, or OI). Bias below is price-action-only. Paste your morning data into data/manual_overrides.json to layer it in."
+      }
+    }
+  },
+  "yields": {
+    "TNX": {
+      "ok": true,
+      "last_yield": 4.540999889373779,
+      "prev_yield": 4.568999767303467,
+      "direction": "falling"
+    }
+  },
+  "confluence_notes": [
+    "10Y yield FALLING -> tailwind for Gold and NQ/growth, headwind for DXY.",
+    "DXY and Gold biases are inversely aligned (normal relationship) - supports higher-confidence conviction on both."
+  ],
+  "final_stance": "NEUTRAL / WAIT - mixed signals, let price confirm"
+}
