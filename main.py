@@ -132,7 +132,7 @@ def main():
     p_hist = sub.add_parser("history", help="Show the last N reports")
     p_hist.add_argument("--n", type=int, default=5)
 
-  p_show = sub.add_parser("show", help="Show a specific saved report")
+    p_show = sub.add_parser("show", help="Show a specific saved report")
     p_show.add_argument("--date", required=True, help="YYYY-MM-DD")
     p_show.add_argument("--session", required=True, choices=["asia", "ny"])
 
