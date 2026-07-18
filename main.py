@@ -17,9 +17,36 @@ import sys
 
 from app.config import load_config, load_manual_overrides
 from app.logger import get_logger
-from app import data_fetch, macro_calendar, report_generator, storage
+from app import data_fetch, macro_calendar, report_generator, storage, level_watch
 
 log = get_logger("main")
+
+
+def cmd_check_levels(cfg: dict):
+    log.info("Checking D/W/M levels for NQ, DXY, Gold ...")
+    events = level_watch.check_all_levels(cfg)
+    if not events:
+        print("No new level touches this check.")
+        return
+    msg = level_watch.format_alert_message(events)
+    print(msg)
+
+    bot_token = os.environ.get("TELEGRAM_BOT_TOKEN", "")
+    chat_id = os.environ.get("TELEGRAM_CHAT_ID", "")
+    if bot_token and chat_id:
+        import requests
+        try:
+            resp = requests.post(
+                f"https://api.telegram.org/bot{bot_token}/sendMessage",
+                data={"chat_id": chat_id, "text": msg},
+                timeout=10,
+            )
+            if not resp.ok:
+                log.error(f"Telegram send failed: {resp.status_code} {resp.text}")
+        except Exception as e:
+            log.error(f"Telegram send error: {e}")
+    else:
+        log.info("TELEGRAM_BOT_TOKEN/TELEGRAM_CHAT_ID not set - printed alert only, no Telegram send.")
 
 
 def cmd_generate(session: str, cfg: dict):
@@ -105,9 +132,11 @@ def main():
     p_hist = sub.add_parser("history", help="Show the last N reports")
     p_hist.add_argument("--n", type=int, default=5)
 
-    p_show = sub.add_parser("show", help="Show a specific saved report")
+  p_show = sub.add_parser("show", help="Show a specific saved report")
     p_show.add_argument("--date", required=True, help="YYYY-MM-DD")
     p_show.add_argument("--session", required=True, choices=["asia", "ny"])
+
+    sub.add_parser("check-levels", help="Check D/W/M OHLC levels and alert on touch")
 
     args = parser.parse_args()
     cfg = load_config()
@@ -120,6 +149,8 @@ def main():
         cmd_history(cfg, args.n)
     elif args.command == "show":
         cmd_show(cfg, args.date, args.session)
+    elif args.command == "check-levels":
+        cmd_check_levels(cfg)
 
 
 if __name__ == "__main__":
