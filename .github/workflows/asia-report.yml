@@ -6,7 +6,7 @@ on:
     # This lands BEFORE the Asia/Sydney-Tokyo trading session opens
     # (Sydney opens ~22:00 UTC), covering pre-session for Mon-Fri
     # Asia sessions. Adjust if your broker's Asia open differs.
-    - cron: "0 21 * * 0-4"
+    - cron: "30 23 * * 0-4"
   workflow_dispatch: {}
 
 permissions:
