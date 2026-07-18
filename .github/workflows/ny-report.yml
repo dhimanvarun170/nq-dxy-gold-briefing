@@ -1,0 +1,39 @@
+name: NY Pre-Session Report
+
+on:
+  schedule:
+    # 11:00 UTC, Monday-Friday.
+    # NY cash equities open 13:30 UTC (9:30am ET standard time;
+    # 14:30 UTC / adjust -1h during US daylight saving). This gives
+    # ~2-2.5h lead time pre-session. Adjust if you want tighter timing.
+    - cron: "0 11 * * 1-5"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  generate-ny-report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Generate NY report
+        run: python main.py generate ny
+
+      - name: Commit and push report
+        run: |
+          git config user.name "market-briefing-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add reports/
+          git diff --quiet && git diff --staged --quiet || git commit -m "Auto: NY pre-session report $(date -u +%Y-%m-%d)"
+          git push

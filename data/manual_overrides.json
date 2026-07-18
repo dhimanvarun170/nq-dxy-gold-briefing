@@ -1,0 +1,20 @@
+{
+  "NQ": {
+    "spot": 19850,
+    "call_wall": 19900,
+    "put_wall": 19700,
+    "gamma_flip": 19800,
+    "net_gex": "+1.2B",
+    "max_pain": 19800,
+    "top_oi": "19800C (exp 2026-07-18), 19700P (exp 2026-07-18)"
+  },
+  "GC": {
+    "spot": 2415,
+    "call_wall": 2430,
+    "put_wall": 2390,
+    "gamma_flip": 2410,
+    "net_gex": "-300M",
+    "max_pain": 2410,
+    "top_oi": "2430C (exp 2026-07-18), 2400P (exp 2026-07-18)"
+  }
+}

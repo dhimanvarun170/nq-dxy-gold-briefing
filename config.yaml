@@ -1,0 +1,80 @@
+# ==========================================================
+# Market Briefing System - Configuration
+# All values here are free-tier safe. No paid keys required.
+# ==========================================================
+
+timezone: "UTC"          # canonical timezone for report timestamps
+display_timezone: "Asia/Kolkata"   # convenience second timestamp shown in reports
+
+# ----------------------------------------------------------
+# Instruments and their free data-source tickers (Yahoo Finance
+# via the unofficial `yfinance` library - no API key needed).
+# ----------------------------------------------------------
+instruments:
+  NQ:
+    label: "Nasdaq 100 E-mini Futures"
+    yf_ticker: "NQ=F"
+    fallback_ticker: "^NDX"     # used if NQ=F has no data (e.g. holiday gap)
+  DXY:
+    label: "US Dollar Index"
+    yf_ticker: "DX-Y.NYB"
+    fallback_ticker: "DX=F"
+  GC:
+    label: "Gold Futures"
+    yf_ticker: "GC=F"
+    fallback_ticker: "XAUUSD=X"
+  TNX:
+    label: "US 10-Year Treasury Yield"
+    yf_ticker: "^TNX"
+    fallback_ticker: null
+
+# ----------------------------------------------------------
+# Macro / economic calendar (free, unofficial, best-effort).
+# ForexFactory publishes a public JSON feed used by widgets.
+# It is NOT an official API, has no SLA, and can change or
+# break without notice -> code MUST fail gracefully if it does.
+# ----------------------------------------------------------
+macro_calendar:
+  source_url: "https://nfs.faireconomy.media/ff_calendar_thisweek.json"
+  high_impact_only_in_summary: true
+  lookahead_hours: 24
+  request_timeout_seconds: 10
+
+# ----------------------------------------------------------
+# Options/gamma data (call wall, put wall, gamma flip, net GEX,
+# max pain, top OI). There is NO reliable free API for this.
+# The system supports optional MANUAL overrides you paste in
+# yourself (same shorthand you already use every morning).
+# If absent, reports clearly state gamma data is unavailable
+# and fall back to pure price-action / ICT levels instead.
+# ----------------------------------------------------------
+manual_overrides_path: "data/manual_overrides.json"
+
+# ----------------------------------------------------------
+# Session windows (UTC). Used only for labeling/context in the
+# report text - actual run time is controlled by GitHub Actions.
+# ----------------------------------------------------------
+sessions:
+  asia:
+    label: "Asia Pre-Session"
+    session_window_utc: "23:00-08:00"
+  ny:
+    label: "NY Pre-Session"
+    session_window_utc: "12:00-21:00"
+
+# ----------------------------------------------------------
+# Price-action / ICT-lite lookback settings
+# ----------------------------------------------------------
+analysis:
+  intraday_interval: "15m"
+  intraday_lookback_days: 5
+  daily_lookback_days: 30
+  swing_lookback_bars: 40      # bars scanned for liquidity pool / swing high-low detection
+  fvg_lookback_bars: 30        # bars scanned for fair value gaps
+
+# ----------------------------------------------------------
+# Output
+# ----------------------------------------------------------
+output:
+  reports_dir: "reports"
+  log_file: "logs/app.log"

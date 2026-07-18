@@ -1,0 +1,120 @@
+#!/usr/bin/env python3
+"""
+CLI entry point.
+
+Commands:
+  python main.py generate asia
+  python main.py generate ny
+  python main.py latest
+  python main.py history [--n 5]
+  python main.py show --date YYYY-MM-DD --session asia|ny
+"""
+from __future__ import annotations
+import argparse
+import datetime as dt
+import sys
+
+from app.config import load_config, load_manual_overrides
+from app.logger import get_logger
+from app import data_fetch, macro_calendar, report_generator, storage
+
+log = get_logger("main")
+
+
+def cmd_generate(session: str, cfg: dict):
+    log.info(f"Generating {session} report ...")
+    overrides = load_manual_overrides(cfg)
+    if not overrides:
+        log.info("No manual gamma/options overrides found - proceeding price-action-only "
+                  "(this is expected/normal, not an error).")
+
+    try:
+        fetch_data = data_fetch.fetch_all(cfg)
+    except Exception as e:
+        log.error(f"Unexpected error during market data fetch: {e}")
+        fetch_data = {}
+
+    try:
+        macro_data = macro_calendar.fetch_macro_events(cfg)
+    except Exception as e:
+        log.error(f"Unexpected error during macro fetch: {e}")
+        macro_data = {"ok": False, "reason": str(e), "events": []}
+
+    report = report_generator.build_report(session, cfg, fetch_data, macro_data, overrides)
+    markdown = report_generator.render_markdown(report)
+
+    reports_dir = cfg["output"]["reports_dir"]
+    md_path, json_path = storage.save_report(report, markdown, session, reports_dir)
+
+    print(markdown)
+    print(f"\n[saved] {md_path}")
+    print(f"[saved] {json_path}")
+
+
+def cmd_latest(cfg: dict):
+    reports_dir = cfg["output"]["reports_dir"]
+    path = storage.find_latest_report(reports_dir)
+    if not path:
+        print("No reports found yet. Run `python main.py generate asia` or `ny` first.")
+        return
+    with open(path) as f:
+        print(f.read())
+
+
+def cmd_history(cfg: dict, n: int):
+    reports_dir = cfg["output"]["reports_dir"]
+    paths = storage.find_last_n_reports(reports_dir, n)
+    if not paths:
+        print("No reports found yet.")
+        return
+    for p in paths:
+        print(f"\n{'=' * 70}\n{p}\n{'=' * 70}")
+        with open(p) as f:
+            print(f.read())
+
+
+def cmd_show(cfg: dict, date: str, session: str):
+    reports_dir = cfg["output"]["reports_dir"]
+    md = storage.load_report_markdown(reports_dir, date, session)
+    if md is None:
+        print(f"No report found for {date} / {session}. "
+              f"Expected file: {reports_dir}/{date}-{session}.md")
+        return
+    print(md)
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Free automated NQ/DXY/Gold pre-session briefing system")
+    sub = parser.add_subparsers(dest="command", required=True)
+
+    p_gen = sub.add_parser("generate", help="Generate a report for a session")
+    p_gen.add_argument("session", choices=["asia", "ny"])
+
+    sub.add_parser("latest", help="Show the most recently generated report")
+
+    p_hist = sub.add_parser("history", help="Show the last N reports")
+    p_hist.add_argument("--n", type=int, default=5)
+
+    p_show = sub.add_parser("show", help="Show a specific saved report")
+    p_show.add_argument("--date", required=True, help="YYYY-MM-DD")
+    p_show.add_argument("--session", required=True, choices=["asia", "ny"])
+
+    args = parser.parse_args()
+    cfg = load_config()
+
+    if args.command == "generate":
+        cmd_generate(args.session, cfg)
+    elif args.command == "latest":
+        cmd_latest(cfg)
+    elif args.command == "history":
+        cmd_history(cfg, args.n)
+    elif args.command == "show":
+        cmd_show(cfg, args.date, args.session)
+
+
+if __name__ == "__main__":
+    try:
+        main()
+    except Exception as e:
+        log.error(f"Fatal error: {e}")
+        sys.exit(1)

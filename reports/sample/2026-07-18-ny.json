@@ -1,0 +1,122 @@
+{
+  "meta": {
+    "session": "ny",
+    "session_label": "NY Pre-Session",
+    "session_window_utc": "12:00-21:00",
+    "generated_at_utc": "2026-07-18T03:20:00.055170+00:00",
+    "generated_at_display_tz": "2026-07-18T08:50:00.055170+05:30",
+    "display_timezone": "Asia/Kolkata"
+  },
+  "macro": {
+    "ok": false,
+    "reason": "403 Client Error: Forbidden for url: https://nfs.faireconomy.media/ff_calendar_thisweek.json",
+    "high_impact_next_window": [],
+    "all_upcoming_next_window": [],
+    "window_hours": null
+  },
+  "instruments": {
+    "NQ": {
+      "ok": true,
+      "ticker_used": "NQ=F",
+      "last_price": 132.42612856957552,
+      "prior_day_high": 132.73702638741455,
+      "prior_day_low": 131.92079964578707,
+      "prior_day_close": 131.88463997805042,
+      "pct_change_vs_prior_close": 0.4105774498191974,
+      "htf_trend_ema8_vs_ema21": "down",
+      "swing_high_liquidity_pool": 135.62840065353964,
+      "swing_low_liquidity_pool": 128.74331757454436,
+      "fair_value_gaps": {
+        "bullish_fvg": {
+          "gap_low": 132.14759343915898,
+          "gap_high": 132.47004347523134
+        },
+        "bearish_fvg": {
+          "gap_low": 132.8763420446918,
+          "gap_high": 134.09079056888973
+        }
+      },
+      "bias": "neutral",
+      "gamma_data": {
+        "available": true,
+        "spot": 19850,
+        "call_wall": 19900,
+        "put_wall": 19700,
+        "gamma_flip": 19800,
+        "net_gex": "+1.2B",
+        "max_pain": 19800,
+        "top_oi": "19800C (exp 2026-07-18), 19700P (exp 2026-07-18)"
+      }
+    },
+    "DXY": {
+      "ok": true,
+      "ticker_used": "DX-Y.NYB",
+      "last_price": 137.67859033159598,
+      "prior_day_high": 138.720076763781,
+      "prior_day_low": 136.30691697815035,
+      "prior_day_close": 137.58747388062875,
+      "pct_change_vs_prior_close": 0.06622437958726353,
+      "htf_trend_ema8_vs_ema21": "down",
+      "swing_high_liquidity_pool": 142.42547624246416,
+      "swing_low_liquidity_pool": 135.70368376635864,
+      "fair_value_gaps": {
+        "bullish_fvg": {
+          "gap_low": 138.13017468625029,
+          "gap_high": 138.466795984732
+        },
+        "bearish_fvg": {
+          "gap_low": 137.97233337009195,
+          "gap_high": 138.466795984732
+        }
+      },
+      "bias": "neutral",
+      "gamma_data": {
+        "available": false,
+        "note": "DXY has no reliable options/gamma chain (thin ICE DX options market) - price action + macro/news only, by design."
+      }
+    },
+    "GC": {
+      "ok": true,
+      "ticker_used": "GC=F",
+      "last_price": 130.8570865931977,
+      "prior_day_high": 131.95648422303077,
+      "prior_day_low": 130.8266964469063,
+      "prior_day_close": 131.29836495564965,
+      "pct_change_vs_prior_close": -0.33608823887564004,
+      "htf_trend_ema8_vs_ema21": "up",
+      "swing_high_liquidity_pool": 135.034850275262,
+      "swing_low_liquidity_pool": 128.6936923484103,
+      "fair_value_gaps": {
+        "bullish_fvg": null,
+        "bearish_fvg": {
+          "gap_low": 129.92979417251001,
+          "gap_high": 130.90827495279657
+        }
+      },
+      "bias": "neutral",
+      "gamma_data": {
+        "available": true,
+        "spot": 2415,
+        "call_wall": 2430,
+        "put_wall": 2390,
+        "gamma_flip": 2410,
+        "net_gex": "-300M",
+        "max_pain": 2410,
+        "top_oi": "2430C (exp 2026-07-18), 2400P (exp 2026-07-18)"
+      }
+    }
+  },
+  "yields": {
+    "TNX": {
+      "ok": true,
+      "last_yield": 131.01219752533643,
+      "prev_yield": 131.45727479493044,
+      "direction": "falling"
+    }
+  },
+  "confluence_notes": [
+    "10Y yield FALLING -> tailwind for Gold and NQ/growth, headwind for DXY.",
+    "DXY and Gold biases are inversely aligned (normal relationship) - supports higher-confidence conviction on both."
+  ],
+  "final_stance": "NEUTRAL / WAIT - mixed signals, let price confirm"
+}
