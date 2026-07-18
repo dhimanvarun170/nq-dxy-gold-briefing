@@ -3,8 +3,8 @@
     "session": "asia",
     "session_label": "Asia Pre-Session",
     "session_window_utc": "23:00-08:00",
-    "generated_at_utc": "2026-07-18T04:07:49.794514+00:00",
-    "generated_at_display_tz": "2026-07-18T09:37:49.794514+05:30",
+    "generated_at_utc": "2026-07-18T12:41:44.183939+00:00",
+    "generated_at_display_tz": "2026-07-18T18:11:44.183939+05:30",
     "display_timezone": "Asia/Kolkata"
   },
   "macro": {
@@ -18,11 +18,11 @@
     "NQ": {
       "ok": true,
       "ticker_used": "NQ=F",
-      "last_price": 28768.25,
+      "last_price": 28773.25,
       "prior_day_high": 29797.0,
       "prior_day_low": 29078.5,
       "prior_day_close": 29225.75,
-      "pct_change_vs_prior_close": -1.565400374669598,
+      "pct_change_vs_prior_close": -1.5482921738535367,
       "htf_trend_ema8_vs_ema21": "down",
       "swing_high_liquidity_pool": 29050.25,
       "swing_low_liquidity_pool": 28408.25,
@@ -38,14 +38,8 @@
       },
       "bias": "bearish",
       "gamma_data": {
-        "available": true,
-        "spot": 19850,
-        "call_wall": 19900,
-        "put_wall": 19700,
-        "gamma_flip": 19800,
-        "net_gex": "+1.2B",
-        "max_pain": 19800,
-        "top_oi": "19800C (exp 2026-07-18), 19700P (exp 2026-07-18)"
+        "available": false,
+        "note": "No manual gamma/options data provided for this run (no free API exists for call/put walls, gamma flip, net GEX, max pain, or OI). Bias below is price-action-only. Paste your morning data into data/manual_overrides.json to layer it in."
       }
     },
     "DXY": {
@@ -78,11 +72,11 @@
     "GC": {
       "ok": true,
       "ticker_used": "GC=F",
-      "last_price": 4023.0,
+      "last_price": 4018.800048828125,
       "prior_day_high": 4030.5,
       "prior_day_low": 3972.60009765625,
       "prior_day_close": 3985.60009765625,
-      "pct_change_vs_prior_close": 0.938375688161569,
+      "pct_change_vs_prior_close": 0.8329975501405266,
       "htf_trend_ema8_vs_ema21": "down",
       "swing_high_liquidity_pool": 4028.89990234375,
       "swing_low_liquidity_pool": 3963.0,
@@ -98,14 +92,8 @@
       },
       "bias": "neutral",
       "gamma_data": {
-        "available": true,
-        "spot": 2415,
-        "call_wall": 2430,
-        "put_wall": 2390,
-        "gamma_flip": 2410,
-        "net_gex": "-300M",
-        "max_pain": 2410,
-        "top_oi": "2430C (exp 2026-07-18), 2400P (exp 2026-07-18)"
+        "available": false,
+        "note": "No manual gamma/options data provided for this run (no free API exists for call/put walls, gamma flip, net GEX, max pain, or OI). Bias below is price-action-only. Paste your morning data into data/manual_overrides.json to layer it in."
       }
     }
   },
