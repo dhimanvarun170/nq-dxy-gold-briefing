@@ -2,10 +2,7 @@ name: Asia Pre-Session Report
 
 on:
   schedule:
-    # 21:00 UTC, Sunday-Thursday (UTC).
-    # This lands BEFORE the Asia/Sydney-Tokyo trading session opens
-    # (Sydney opens ~22:00 UTC), covering pre-session for Mon-Fri
-    # Asia sessions. Adjust if your broker's Asia open differs.
+    # 23:30 UTC, Sunday-Thursday = 5:00 AM IST, 30 min before your 5:30 AM Asia session start.
     - cron: "30 23 * * 0-4"
   workflow_dispatch: {}
 
@@ -31,11 +28,14 @@ jobs:
         run: python main.py generate asia
 
       - name: Send Telegram notification
-        if: ${{ secrets.TELEGRAM_BOT_TOKEN != '' }}
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
+          if [ -z "$TELEGRAM_BOT_TOKEN" ] || [ -z "$TELEGRAM_CHAT_ID" ]; then
+            echo "Telegram secrets not set - skipping notification."
+            exit 0
+          fi
           SUMMARY=$(cat reports/latest_telegram_summary.txt)
           curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
             --data-urlencode "chat_id=${TELEGRAM_CHAT_ID}" \
