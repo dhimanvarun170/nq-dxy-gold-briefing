@@ -12,6 +12,7 @@ Commands:
 from __future__ import annotations
 import argparse
 import datetime as dt
+import os
 import sys
 
 from app.config import load_config, load_manual_overrides
@@ -49,6 +50,15 @@ def cmd_generate(session: str, cfg: dict):
     print(markdown)
     print(f"\n[saved] {md_path}")
     print(f"[saved] {json_path}")
+
+    date_str = dt.datetime.now(dt.timezone.utc).date().isoformat()
+    repo_slug = os.environ.get("GITHUB_REPOSITORY", "")
+    repo_url = f"https://github.com/{repo_slug}" if repo_slug else ""
+    summary = report_generator.render_telegram_summary(report, repo_url=repo_url, date_str=date_str)
+    summary_path = os.path.join(reports_dir, "latest_telegram_summary.txt")
+    with open(summary_path, "w") as f:
+        f.write(summary)
+    print(f"[saved] {summary_path}")
 
 
 def cmd_latest(cfg: dict):
