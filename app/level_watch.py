@@ -27,9 +27,6 @@ except ImportError:  # pragma: no cover
 
 STATE_PATH = "data/level_alert_state.json"
 
-# How close (as a fraction of price) counts as "touching" a level.
-# 0.0008 = 0.08%, tight enough to mean a real touch, loose enough to
-# not be missed between 15-minute checks. Tune per instrument if needed.
 TOUCH_TOLERANCE = {
     "NQ": 0.0008,
     "DXY": 0.0008,
@@ -61,22 +58,15 @@ def _reset_state_if_new_day(state: dict) -> dict:
 
 
 def _compute_levels(daily_df: pd.DataFrame) -> dict:
-    """
-    Returns prior Day/Week/Month High/Low/Close from a daily OHLC
-    DataFrame (needs >= ~35 daily bars to safely derive a full prior
-    week and prior month).
-    """
     levels = {}
     if daily_df is None or daily_df.empty or len(daily_df) < 3:
         return levels
 
-    # Prior day = second-to-last row (last row is "today", still forming)
     prior_day = daily_df.iloc[-2]
     levels["Prior Day High"] = float(prior_day["High"])
     levels["Prior Day Low"] = float(prior_day["Low"])
     levels["Prior Day Close"] = float(prior_day["Close"])
 
-    # Weekly resample (W-FRI so the week ends Friday, standard for futures/FX)
     weekly = daily_df.resample("W-FRI").agg(
         {"Open": "first", "High": "max", "Low": "min", "Close": "last"}
     )
@@ -86,7 +76,6 @@ def _compute_levels(daily_df: pd.DataFrame) -> dict:
         levels["Prior Week Low"] = float(prior_week["Low"])
         levels["Prior Week Close"] = float(prior_week["Close"])
 
-    # Monthly resample
     monthly = daily_df.resample("ME").agg(
         {"Open": "first", "High": "max", "Low": "min", "Close": "last"}
     )
@@ -100,8 +89,6 @@ def _compute_levels(daily_df: pd.DataFrame) -> dict:
 
 
 def fetch_levels_for_instrument(ticker: str, fallback_ticker: str | None) -> dict:
-    """Pulls ~90 days of daily bars (enough for prior D/W/M) and returns
-    both the current spot price and the computed level dict."""
     if yf is None:
         return {"ok": False, "reason": "yfinance not installed"}
 
@@ -124,18 +111,13 @@ def fetch_levels_for_instrument(ticker: str, fallback_ticker: str | None) -> dic
 
 
 def check_all_levels(cfg: dict) -> list[dict]:
-    """
-    Returns a list of freshly-triggered touch events (not yet alerted
-    today), each: {"instrument": "NQ", "level_name": "Prior Week High",
-    "level_value": ..., "spot": ...}
-    """
     state = _load_state()
     state = _reset_state_if_new_day(state)
 
     events = []
     for key, meta in cfg["instruments"].items():
         if key == "TNX":
-            continue  # yield isn't a tradeable level-touch instrument here
+            continue
         result = fetch_levels_for_instrument(meta["yf_ticker"], meta.get("fallback_ticker"))
         if not result.get("ok"):
             log.warning(f"{key}: level check skipped - {result.get('reason')}")
