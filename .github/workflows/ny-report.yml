@@ -6,7 +6,7 @@ on:
     # NY cash equities open 13:30 UTC (9:30am ET standard time;
     # 14:30 UTC / adjust -1h during US daylight saving). This gives
     # ~2-2.5h lead time pre-session. Adjust if you want tighter timing.
-    - cron: "0 11 * * 1-5"
+    - cron: "0 13 * * 1-5"
   workflow_dispatch: {}
 
 permissions:
