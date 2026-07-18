@@ -114,10 +114,8 @@ def check_all_levels(cfg: dict) -> list[dict]:
     state = _load_state()
     state = _reset_state_if_new_day(state)
 
-    events = []
-    for key, meta in cfg["instruments"].items():
-        if key == "TNX":
-            continue
+  events = []
+    for key, meta in cfg.get("level_watch_instruments", cfg["instruments"]).items():
         result = fetch_levels_for_instrument(meta["yf_ticker"], meta.get("fallback_ticker"))
         if not result.get("ok"):
             log.warning(f"{key}: level check skipped - {result.get('reason')}")
