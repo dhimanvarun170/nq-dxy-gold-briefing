@@ -1,0 +1,11 @@
+{
+  "date": "2026-07-18",
+  "triggered": {
+    "NQ": [],
+    "DXY": [
+      "Prior Day High",
+      "Prior Day Close"
+    ],
+    "GC": []
+  }
+}
