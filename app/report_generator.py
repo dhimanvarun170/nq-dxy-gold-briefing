@@ -212,7 +212,30 @@ def render_markdown(report: dict) -> str:
 
     return "\n".join(lines)
 
+def render_telegram_summary(report: dict, repo_url: str = "", date_str: str = "") -> str:
+    meta = report["meta"]
+    nq, dxy, gc = report["instruments"]["NQ"], report["instruments"]["DXY"], report["instruments"]["GC"]
+    tnx = report["yields"]["TNX"]
 
+    def b(a):
+        return a["bias"].upper() if a.get("ok") else "UNKNOWN"
+
+    lines = [
+        f"📊 {meta['session_label']} — {date_str}",
+        "",
+        f"NQ: {b(nq)}" + (f" ({_fmt(nq['last_price'])})" if nq.get("ok") else ""),
+        f"DXY: {b(dxy)}" + (f" ({_fmt(dxy['last_price'])})" if dxy.get("ok") else ""),
+        f"Gold: {b(gc)}" + (f" ({_fmt(gc['last_price'])})" if gc.get("ok") else ""),
+    ]
+    if tnx.get("ok"):
+        lines.append(f"10Y yield: {tnx['direction'].upper()}")
+    lines.append("")
+    lines.append(f"FINAL STANCE: {report['final_stance']}")
+    if repo_url:
+        session = meta["session"]
+        lines.append("")
+        lines.append(f"Full report: {repo_url}/blob/main/reports/{date_str}-{session}.md")
+    return "\n".join(lines)
 def strip_dataframes(report: dict) -> dict:
     """Report dict built by build_report() has no raw DataFrames in it
     already (analysis.py only returns scalars/dicts), but this is a
