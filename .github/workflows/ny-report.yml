@@ -2,10 +2,7 @@ name: NY Pre-Session Report
 
 on:
   schedule:
-    # 11:00 UTC, Monday-Friday.
-    # NY cash equities open 13:30 UTC (9:30am ET standard time;
-    # 14:30 UTC / adjust -1h during US daylight saving). This gives
-    # ~2-2.5h lead time pre-session. Adjust if you want tighter timing.
+    # 13:00 UTC, Monday-Friday = 6:30 PM IST, 30 min before your 7:00 PM NY session start.
     - cron: "0 13 * * 1-5"
   workflow_dispatch: {}
 
@@ -28,14 +25,17 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Generate NY report
-        run: python main.py generate asia
+        run: python main.py generate ny
 
       - name: Send Telegram notification
-        if: ${{ secrets.TELEGRAM_BOT_TOKEN != '' }}
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
+          if [ -z "$TELEGRAM_BOT_TOKEN" ] || [ -z "$TELEGRAM_CHAT_ID" ]; then
+            echo "Telegram secrets not set - skipping notification."
+            exit 0
+          fi
           SUMMARY=$(cat reports/latest_telegram_summary.txt)
           curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
             --data-urlencode "chat_id=${TELEGRAM_CHAT_ID}" \
@@ -46,6 +46,6 @@ jobs:
           git config user.name "market-briefing-bot"
           git config user.email "actions@users.noreply.github.com"
           git add reports/
-          git diff --quiet && git diff --staged --quiet || git commit -m "Auto: Asia pre-session report $(date -u +%Y-%m-%d)"
+          git diff --quiet && git diff --staged --quiet || git commit -m "Auto: NY pre-session report $(date -u +%Y-%m-%d)"
           git pull --rebase --autostash origin main
           git push
