@@ -51,6 +51,66 @@ macro_calendar:
 manual_overrides_path: "data/manual_overrides.json"
 
 # ----------------------------------------------------------
+# Level-watch instruments (used ONLY by the frequent Level Alert
+# Watcher workflow, not the twice-daily NQ/DXY/Gold reports above).
+# Covers the user's full watchlist: oil, majors, BTC, gold/silver
+# spot+futures, NQ, DXY, and 10Y (yield + note futures price).
+# ----------------------------------------------------------
+level_watch_instruments:
+  NQ:
+    label: "Nasdaq 100 Futures"
+    yf_ticker: "NQ=F"
+    fallback_ticker: "^NDX"
+  DXY:
+    label: "US Dollar Index"
+    yf_ticker: "DX-Y.NYB"
+    fallback_ticker: "DX=F"
+  GOLD_FUT:
+    label: "Gold Futures"
+    yf_ticker: "GC=F"
+    fallback_ticker: "XAUUSD=X"
+  GOLD_SPOT:
+    label: "Gold Spot"
+    yf_ticker: "XAUUSD=X"
+    fallback_ticker: "GC=F"
+  SILVER_FUT:
+    label: "Silver Futures"
+    yf_ticker: "SI=F"
+    fallback_ticker: "XAGUSD=X"
+  SILVER_SPOT:
+    label: "Silver Spot"
+    yf_ticker: "XAGUSD=X"
+    fallback_ticker: "SI=F"
+  OIL_FUT:
+    label: "WTI Crude Oil Futures"
+    yf_ticker: "CL=F"
+    fallback_ticker: null
+  EURUSD:
+    label: "EUR/USD"
+    yf_ticker: "EURUSD=X"
+    fallback_ticker: null
+  GBPUSD:
+    label: "GBP/USD"
+    yf_ticker: "GBPUSD=X"
+    fallback_ticker: null
+  USDJPY:
+    label: "USD/JPY"
+    yf_ticker: "USDJPY=X"
+    fallback_ticker: null
+  BTC:
+    label: "Bitcoin"
+    yf_ticker: "BTC-USD"
+    fallback_ticker: null
+  US10Y_YIELD:
+    label: "US 10-Year Treasury Yield"
+    yf_ticker: "^TNX"
+    fallback_ticker: null
+  US10Y_NOTE_FUT:
+    label: "US 10-Year T-Note Futures"
+    yf_ticker: "ZN=F"
+    fallback_ticker: null
+
+# ----------------------------------------------------------
 # Session windows (UTC). Used only for labeling/context in the
 # report text - actual run time is controlled by GitHub Actions.
 # ----------------------------------------------------------
