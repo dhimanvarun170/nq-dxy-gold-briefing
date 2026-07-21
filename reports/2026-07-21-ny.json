@@ -1,0 +1,219 @@
+{
+  "meta": {
+    "session": "ny",
+    "session_label": "NY Pre-Session",
+    "session_window_utc": "12:00-21:00",
+    "generated_at_utc": "2026-07-21T17:55:47.232053+00:00",
+    "generated_at_display_tz": "2026-07-21T23:25:47.232053+05:30",
+    "display_timezone": "Asia/Kolkata"
+  },
+  "macro": {
+    "ok": true,
+    "reason": null,
+    "high_impact_next_window": [
+      {
+        "title": "CPI y/y",
+        "country": "GBP",
+        "impact": "High",
+        "time_utc": "2026-07-22T06:00:00+00:00",
+        "forecast": "2.7%",
+        "previous": "2.8%"
+      }
+    ],
+    "all_upcoming_next_window": [
+      {
+        "title": "API Weekly Statistical Bulletin",
+        "country": "USD",
+        "impact": "Low",
+        "time_utc": "2026-07-21T20:30:00+00:00",
+        "forecast": "",
+        "previous": ""
+      },
+      {
+        "title": "Trade Balance",
+        "country": "JPY",
+        "impact": "Low",
+        "time_utc": "2026-07-21T23:50:00+00:00",
+        "forecast": "-0.56T",
+        "previous": "-0.09T"
+      },
+      {
+        "title": "MI Leading Index m/m",
+        "country": "AUD",
+        "impact": "Low",
+        "time_utc": "2026-07-22T00:30:00+00:00",
+        "forecast": "",
+        "previous": "0.0%"
+      },
+      {
+        "title": "Credit Card Spending y/y",
+        "country": "NZD",
+        "impact": "Low",
+        "time_utc": "2026-07-22T03:00:00+00:00",
+        "forecast": "",
+        "previous": "5.1%"
+      },
+      {
+        "title": "CPI y/y",
+        "country": "GBP",
+        "impact": "High",
+        "time_utc": "2026-07-22T06:00:00+00:00",
+        "forecast": "2.7%",
+        "previous": "2.8%"
+      },
+      {
+        "title": "Core CPI y/y",
+        "country": "GBP",
+        "impact": "Low",
+        "time_utc": "2026-07-22T06:00:00+00:00",
+        "forecast": "2.5%",
+        "previous": "2.6%"
+      },
+      {
+        "title": "PPI Input m/m",
+        "country": "GBP",
+        "impact": "Low",
+        "time_utc": "2026-07-22T06:00:00+00:00",
+        "forecast": "-0.7%",
+        "previous": "0.2%"
+      },
+      {
+        "title": "PPI Output m/m",
+        "country": "GBP",
+        "impact": "Low",
+        "time_utc": "2026-07-22T06:00:00+00:00",
+        "forecast": "-0.1%",
+        "previous": "0.5%"
+      },
+      {
+        "title": "RPI y/y",
+        "country": "GBP",
+        "impact": "Low",
+        "time_utc": "2026-07-22T06:00:00+00:00",
+        "forecast": "3.0%",
+        "previous": "3.1%"
+      },
+      {
+        "title": "Foreign Direct Investment ytd/y",
+        "country": "CNY",
+        "impact": "Low",
+        "time_utc": "2026-07-22T06:02:00+00:00",
+        "forecast": "",
+        "previous": "-8.6%"
+      },
+      {
+        "title": "HPI y/y",
+        "country": "GBP",
+        "impact": "Low",
+        "time_utc": "2026-07-22T08:30:00+00:00",
+        "forecast": "3.2%",
+        "previous": "3.8%"
+      },
+      {
+        "title": "Crude Oil Inventories",
+        "country": "USD",
+        "impact": "Low",
+        "time_utc": "2026-07-22T14:30:00+00:00",
+        "forecast": "-2.0M",
+        "previous": "-1.7M"
+      }
+    ],
+    "window_hours": 24
+  },
+  "instruments": {
+    "NQ": {
+      "ok": true,
+      "ticker_used": "NQ=F",
+      "last_price": 29336.0,
+      "prior_day_high": 29192.5,
+      "prior_day_low": 28709.75,
+      "prior_day_close": 28778.75,
+      "pct_change_vs_prior_close": 1.9363245450201971,
+      "htf_trend_ema8_vs_ema21": "down",
+      "swing_high_liquidity_pool": 29355.5,
+      "swing_low_liquidity_pool": 29064.25,
+      "fair_value_gaps": {
+        "bullish_fvg": {
+          "gap_low": 29256.5,
+          "gap_high": 29271.75
+        },
+        "bearish_fvg": {
+          "gap_low": 29143.0,
+          "gap_high": 29146.0
+        }
+      },
+      "bias": "neutral",
+      "gamma_data": {
+        "available": false,
+        "note": "No manual gamma/options data provided for this run (no free API exists for call/put walls, gamma flip, net GEX, max pain, or OI). Bias below is price-action-only. Paste your morning data into data/manual_overrides.json to layer it in."
+      }
+    },
+    "DXY": {
+      "ok": true,
+      "ticker_used": "DX-Y.NYB",
+      "last_price": 101.1240005493164,
+      "prior_day_high": 101.02999877929688,
+      "prior_day_low": 100.6500015258789,
+      "prior_day_close": 100.98999786376953,
+      "pct_change_vs_prior_close": 0.13268906662186283,
+      "htf_trend_ema8_vs_ema21": "down",
+      "swing_high_liquidity_pool": 101.16000366210938,
+      "swing_low_liquidity_pool": 100.88400268554688,
+      "fair_value_gaps": {
+        "bullish_fvg": {
+          "gap_low": 101.12300109863281,
+          "gap_high": 101.1240005493164
+        },
+        "bearish_fvg": {
+          "gap_low": 101.11799621582031,
+          "gap_high": 101.11900329589844
+        }
+      },
+      "bias": "neutral",
+      "gamma_data": {
+        "available": false,
+        "note": "DXY has no reliable options/gamma chain (thin ICE DX options market) - price action + macro/news only, by design."
+      }
+    },
+    "GC": {
+      "ok": true,
+      "ticker_used": "GC=F",
+      "last_price": 4071.39990234375,
+      "prior_day_high": 4018.89990234375,
+      "prior_day_low": 4002.699951171875,
+      "prior_day_close": 4010.300048828125,
+      "pct_change_vs_prior_close": 1.5235731185121515,
+      "htf_trend_ema8_vs_ema21": "down",
+      "swing_high_liquidity_pool": 4088.0,
+      "swing_low_liquidity_pool": 4048.39990234375,
+      "fair_value_gaps": {
+        "bullish_fvg": {
+          "gap_low": 4078.300048828125,
+          "gap_high": 4079.699951171875
+        },
+        "bearish_fvg": {
+          "gap_low": 4072.800048828125,
+          "gap_high": 4073.300048828125
+        }
+      },
+      "bias": "neutral",
+      "gamma_data": {
+        "available": false,
+        "note": "No manual gamma/options data provided for this run (no free API exists for call/put walls, gamma flip, net GEX, max pain, or OI). Bias below is price-action-only. Paste your morning data into data/manual_overrides.json to layer it in."
+      }
+    }
+  },
+  "yields": {
+    "TNX": {
+      "ok": true,
+      "last_yield": 4.630000114440918,
+      "prev_yield": 4.5980000495910645,
+      "direction": "rising"
+    }
+  },
+  "confluence_notes": [
+    "10Y yield RISING -> headwind for Gold and NQ/growth, tailwind for DXY.",
+    "DXY and Gold biases are inversely aligned (normal relationship) - supports higher-confidence conviction on both."
+  ],
+  "final_stance": "NEUTRAL / WAIT - mixed signals, let price confirm"
+}

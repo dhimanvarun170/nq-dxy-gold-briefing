@@ -1,10 +1,10 @@
-📊 Asia Pre-Session — 2026-07-21
+📊 NY Pre-Session — 2026-07-21
 
-NQ: NEUTRAL (29,181.75)
-DXY: BEARISH (100.94)
-Gold: NEUTRAL (4,068.80)
+NQ: NEUTRAL (29,336.00)
+DXY: NEUTRAL (101.12)
+Gold: NEUTRAL (4,071.40)
 10Y yield: RISING
 
 FINAL STANCE: NEUTRAL / WAIT - mixed signals, let price confirm
 
-Full report: https://github.com/dhimanvarun170/nq-dxy-gold-briefing/blob/main/reports/2026-07-21-asia.md
+Full report: https://github.com/dhimanvarun170/nq-dxy-gold-briefing/blob/main/reports/2026-07-21-ny.md
