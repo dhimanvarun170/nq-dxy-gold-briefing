@@ -1,16 +1,10 @@
 """
-Level-watch: continuously checks NQ / DXY / Gold spot price against
-Daily / Weekly / Monthly OHLC levels (prior period High, Low, Close)
-and fires a Telegram alert the first time price touches/crosses one.
+Level Watch
 
-Runs on its own frequent GitHub Actions cron (separate from the two
-pre-session reports), free-tier friendly - one lightweight yfinance
-call per instrument, no macro calendar hit.
-
-State is tracked in data/level_alert_state.json so the same level
-doesn't spam you every 15 minutes once touched - each level fires
-once per UTC calendar day, then resets.
+Checks NQ / DXY / Gold against previous Day / Week / Month
+High, Low and Close levels.
 """
+
 from __future__ import annotations
 
 import datetime as dt
@@ -18,14 +12,11 @@ import json
 import os
 
 import pandas as pd
+import yfinance as yf
+
 from app.logger import get_logger
 
 log = get_logger(__name__)
-
-try:
-    import yfinance as yf
-except ImportError:  # pragma: no cover
-    yf = None
 
 STATE_PATH = "data/level_alert_state.json"
 
@@ -36,70 +27,96 @@ TOUCH_TOLERANCE = {
 }
 
 
-def _load_state() -> dict:
+def _load_state():
     if not os.path.exists(STATE_PATH):
         return {"date": "", "triggered": {}}
+
     try:
-        with open(STATE_PATH) as f:
+        with open(STATE_PATH, "r") as f:
             return json.load(f)
     except Exception:
         return {"date": "", "triggered": {}}
 
 
-def _save_state(state: dict):
+def _save_state(state):
     os.makedirs(os.path.dirname(STATE_PATH), exist_ok=True)
+
     with open(STATE_PATH, "w") as f:
         json.dump(state, f, indent=2)
 
 
-def _reset_state_if_new_day(state: dict) -> dict:
-    today = dt.datetime.now(dt.timezone.utc).date().isoformat()
+def _reset_state_if_new_day(state):
+    today = dt.datetime.utcnow().date().isoformat()
+
     if state.get("date") != today:
-        return {"date": today, "triggered": {}}
+        return {
+            "date": today,
+            "triggered": {},
+        }
+
     return state
 
 
-def _compute_levels(daily_df: pd.DataFrame) -> dict:
+def _compute_levels(df):
     levels = {}
-    if daily_df is None or daily_df.empty or len(daily_df) < 3:
+
+    if df.empty or len(df) < 3:
         return levels
 
-    prior_day = daily_df.iloc[-2]
-    levels["Prior Day High"] = float(prior_day["High"])
-    levels["Prior Day Low"] = float(prior_day["Low"])
-    levels["Prior Day Close"] = float(prior_day["Close"])
+    prev = df.iloc[-2]
 
-    weekly = daily_df.resample("W-FRI").agg(
-        {"Open": "first", "High": "max", "Low": "min", "Close": "last"}
+    levels["Prior Day High"] = float(prev.High)
+    levels["Prior Day Low"] = float(prev.Low)
+    levels["Prior Day Close"] = float(prev.Close)
+
+    weekly = df.resample("W-FRI").agg(
+        {
+            "Open": "first",
+            "High": "max",
+            "Low": "min",
+            "Close": "last",
+        }
     )
+
     if len(weekly) >= 2:
-        prior_week = weekly.iloc[-2]
-        levels["Prior Week High"] = float(prior_week["High"])
-        levels["Prior Week Low"] = float(prior_week["Low"])
-        levels["Prior Week Close"] = float(prior_week["Close"])
+        prev = weekly.iloc[-2]
 
-    monthly = daily_df.resample("ME").agg(
-        {"Open": "first", "High": "max", "Low": "min", "Close": "last"}
+        levels["Prior Week High"] = float(prev.High)
+        levels["Prior Week Low"] = float(prev.Low)
+        levels["Prior Week Close"] = float(prev.Close)
+
+    monthly = df.resample("ME").agg(
+        {
+            "Open": "first",
+            "High": "max",
+            "Low": "min",
+            "Close": "last",
+        }
     )
+
     if len(monthly) >= 2:
-        prior_month = monthly.iloc[-2]
-        levels["Prior Month High"] = float(prior_month["High"])
-        levels["Prior Month Low"] = float(prior_month["Low"])
-        levels["Prior Month Close"] = float(prior_month["Close"])
+        prev = monthly.iloc[-2]
+
+        levels["Prior Month High"] = float(prev.High)
+        levels["Prior Month Low"] = float(prev.Low)
+        levels["Prior Month Close"] = float(prev.Close)
 
     return levels
 
 
-def fetch_levels_for_instrument(ticker: str, fallback_ticker: str | None) -> dict:
-    if yf is None:
-        return {"ok": False, "reason": "yfinance not installed"}
+def fetch_levels_for_instrument(ticker, fallback=None):
 
-    for candidate in [ticker, fallback_ticker]:
-        if not candidate:
+    for symbol in [ticker, fallback]:
+
+        if not symbol:
             continue
+
         try:
-            tk = yf.Ticker(candidate)
+
+            tk = yf.Ticker(symbol)
+
             daily = tk.history(period="90d", interval="1d")
+
             intraday = tk.history(period="2d", interval="15m")
 
             if daily.empty:
@@ -110,68 +127,85 @@ def fetch_levels_for_instrument(ticker: str, fallback_ticker: str | None) -> dic
             else:
                 spot = float(daily["Close"].iloc[-1])
 
-            levels = _compute_levels(daily)
             return {
                 "ok": True,
-                "ticker_used": candidate,
+                "ticker_used": symbol,
                 "spot": spot,
-                "levels": levels,
+                "levels": _compute_levels(daily),
             }
+
         except Exception as e:
-            log.warning(f"Level fetch failed for {candidate}: {e}")
-            continue
+            log.warning(f"{symbol}: {e}")
 
     return {
         "ok": False,
-        "reason": f"all tickers failed for {ticker}/{fallback_ticker}",
+        "reason": "No valid ticker",
     }
 
 
-def check_all_levels(cfg: dict) -> list[dict]:
-    state = _load_state()
-    state = _reset_state_if_new_day(state)
+def check_all_levels(cfg):
+
+    state = _reset_state_if_new_day(_load_state())
 
     events = []
-    for key, meta in cfg.get("level_watch_instruments", cfg["instruments"]).items():
+
+    instruments = cfg.get(
+        "level_watch_instruments",
+        cfg["instruments"],
+    )
+
+    for key, meta in instruments.items():
+
         result = fetch_levels_for_instrument(
             meta["yf_ticker"],
             meta.get("fallback_ticker"),
         )
-        if not result.get("ok"):
-            log.warning(f"{key}: level check skipped - {result.get('reason')}")
+
+        if not result["ok"]:
             continue
 
         spot = result["spot"]
-        tol = TOUCH_TOLERANCE.get(key, 0.001)
+
+        tolerance = TOUCH_TOLERANCE.get(key, 0.001)
+
         already = state["triggered"].setdefault(key, [])
 
-        for level_name, level_value in result["levels"].items():
-            if level_value is None or level_value == 0:
+        for name, level in result["levels"].items():
+
+            if level == 0:
                 continue
 
-            distance = abs(spot - level_value) / level_value
-            touched = distance <= tol
+            distance = abs(spot - level) / level
 
-            if touched and level_name not in already:
+            if distance <= tolerance and name not in already:
+
                 events.append(
                     {
                         "instrument": key,
-                        "level_name": level_name,
-                        "level_value": level_value,
+                        "level_name": name,
+                        "level_value": level,
                         "spot": spot,
                     }
                 )
-                already.append(level_name)
+
+                already.append(name)
 
     _save_state(state)
+
     return events
 
 
-def format_alert_message(events: list[dict]) -> str:
+def format_alert_message(events):
+
     lines = ["🔔 Level Alert"]
+
     for e in events:
+
         lines.append(
-            f"{e['instrument']}: touched {e['level_name']} "
-            f"({e['level_value']:,.2f}) — spot {e['spot']:,.2f}"
+            f"{e['instrument']}: "
+            f"{e['level_name']} "
+            f"({e['level_value']:.2f}) "
+            f"Spot: {e['spot']:.2f}"
         )
+
     return "\n".join(lines)
