@@ -2,9 +2,9 @@ name: NY Pre-Session Report
 
 on:
   schedule:
-    # 13:00 UTC, Monday-Friday = 6:30 PM IST, 30 min before your 7:00 PM NY session start.
+    # 13:00 UTC, Monday-Friday = 6:30 PM IST
     - cron: "0 13 * * 1-5"
-  workflow_dispatch: {}
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -12,8 +12,9 @@ permissions:
 jobs:
   generate-ny-report:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Set up Python
@@ -22,30 +23,58 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
       - name: Generate NY report
-        run: python main.py generate ny
+        run: |
+          python main.py generate ny
 
-      - name: Send Telegram notification
+      - name: Send summary to Telegram
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          if [ -z "$TELEGRAM_BOT_TOKEN" ] || [ -z "$TELEGRAM_CHAT_ID" ]; then
-            echo "Telegram secrets not set - skipping notification."
-            exit 0
+          if [ -f reports/latest_telegram_summary.txt ]; then
+            SUMMARY=$(cat reports/latest_telegram_summary.txt)
+
+            curl -s -X POST \
+              "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+              --data-urlencode "chat_id=${TELEGRAM_CHAT_ID}" \
+              --data-urlencode "text=${SUMMARY}"
+          else
+            echo "No summary file found."
           fi
-          SUMMARY=$(cat reports/latest_telegram_summary.txt)
-          curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
-            --data-urlencode "chat_id=${TELEGRAM_CHAT_ID}" \
-            --data-urlencode "text=${SUMMARY}"
+
+      - name: Send full NY report to Telegram
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          FILE=$(ls -t reports/*-ny.md | head -n 1)
+
+          if [ -f "$FILE" ]; then
+            curl -s -X POST \
+              "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendDocument" \
+              -F chat_id="${TELEGRAM_CHAT_ID}" \
+              -F document=@"${FILE}" \
+              -F caption="📊 New York Pre-Session Report"
+          else
+            echo "NY report not found."
+          fi
 
       - name: Commit and push report
         run: |
           git config user.name "market-briefing-bot"
           git config user.email "actions@users.noreply.github.com"
+
           git add reports/
-          git diff --quiet && git diff --staged --quiet || git commit -m "Auto: NY pre-session report $(date -u +%Y-%m-%d)"
-          git pull --rebase --autostash origin main
-          git push
+
+          if ! git diff --cached --quiet; then
+            git commit -m "Auto: NY pre-session report $(date -u +%Y-%m-%d)"
+            git pull --rebase --autostash origin main
+            git push
+          else
+            echo "No report changes to commit."
+          fi
