@@ -12,9 +12,11 @@ doesn't spam you every 15 minutes once touched - each level fires
 once per UTC calendar day, then resets.
 """
 from __future__ import annotations
+
 import datetime as dt
 import json
 import os
+
 import pandas as pd
 from app.logger import get_logger
 
@@ -99,24 +101,42 @@ def fetch_levels_for_instrument(ticker: str, fallback_ticker: str | None) -> dic
             tk = yf.Ticker(candidate)
             daily = tk.history(period="90d", interval="1d")
             intraday = tk.history(period="2d", interval="15m")
+
             if daily.empty:
                 continue
-            spot = float(intraday["Close"].iloc[-1]) if not intraday.empty else float(daily["Close"].iloc[-1])
+
+            if not intraday.empty:
+                spot = float(intraday["Close"].iloc[-1])
+            else:
+                spot = float(daily["Close"].iloc[-1])
+
             levels = _compute_levels(daily)
-            return {"ok": True, "ticker_used": candidate, "spot": spot, "levels": levels}
+            return {
+                "ok": True,
+                "ticker_used": candidate,
+                "spot": spot,
+                "levels": levels,
+            }
         except Exception as e:
             log.warning(f"Level fetch failed for {candidate}: {e}")
             continue
-    return {"ok": False, "reason": f"all tickers failed for {ticker}/{fallback_ticker}"}
+
+    return {
+        "ok": False,
+        "reason": f"all tickers failed for {ticker}/{fallback_ticker}",
+    }
 
 
 def check_all_levels(cfg: dict) -> list[dict]:
     state = _load_state()
     state = _reset_state_if_new_day(state)
 
-  events = []
+    events = []
     for key, meta in cfg.get("level_watch_instruments", cfg["instruments"]).items():
-        result = fetch_levels_for_instrument(meta["yf_ticker"], meta.get("fallback_ticker"))
+        result = fetch_levels_for_instrument(
+            meta["yf_ticker"],
+            meta.get("fallback_ticker"),
+        )
         if not result.get("ok"):
             log.warning(f"{key}: level check skipped - {result.get('reason')}")
             continue
@@ -128,15 +148,19 @@ def check_all_levels(cfg: dict) -> list[dict]:
         for level_name, level_value in result["levels"].items():
             if level_value is None or level_value == 0:
                 continue
+
             distance = abs(spot - level_value) / level_value
             touched = distance <= tol
+
             if touched and level_name not in already:
-                events.append({
-                    "instrument": key,
-                    "level_name": level_name,
-                    "level_value": level_value,
-                    "spot": spot,
-                })
+                events.append(
+                    {
+                        "instrument": key,
+                        "level_name": level_name,
+                        "level_value": level_value,
+                        "spot": spot,
+                    }
+                )
                 already.append(level_name)
 
     _save_state(state)
