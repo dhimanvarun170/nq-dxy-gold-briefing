@@ -1,7 +1,9 @@
 {
   "date": "2026-07-22",
   "triggered": {
-    "NQ": [],
+    "NQ": [
+      "Prior Day Close"
+    ],
     "DXY": [
       "Prior Day Close",
       "Prior Month Close",
