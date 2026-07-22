@@ -68,8 +68,25 @@ def cmd_generate(session: str, cfg: dict):
         log.error(f"Unexpected error during macro fetch: {e}")
         macro_data = {"ok": False, "reason": str(e), "events": []}
 
-    report = report_generator.build_report(session, cfg, fetch_data, macro_data, overrides)
+   report = report_generator.build_report(session, cfg, fetch_data, macro_data, overrides)
     markdown = report_generator.render_markdown(report)
+
+    top_setups = []
+    try:
+        watchlist = level_watch.analyze_full_watchlist(cfg)
+        for inst in watchlist:
+            if inst.get("ok"):
+                inst["headline"] = level_watch.fetch_headline(inst["ticker_used"])
+        top_setups = level_watch.rank_top_setups(watchlist, top_n=2)
+        watchlist_md = report_generator.render_full_watchlist_markdown(watchlist, top_setups)
+        headline_lines = "\n".join(
+            f"- {w['label']}: {w.get('headline', 'N/A')}" for w in watchlist if w.get("ok")
+        )
+        markdown += "\n" + watchlist_md + "\n## Today's Headlines\n" + headline_lines + "\n"
+        report["full_watchlist"] = watchlist
+        report["top_setups"] = top_setups
+    except Exception as e:
+        log.error(f"Full watchlist section failed - core report unaffected: {e}")
 
     reports_dir = cfg["output"]["reports_dir"]
     md_path, json_path = storage.save_report(report, markdown, session, reports_dir)
@@ -82,6 +99,12 @@ def cmd_generate(session: str, cfg: dict):
     repo_slug = os.environ.get("GITHUB_REPOSITORY", "")
     repo_url = f"https://github.com/{repo_slug}" if repo_slug else ""
     summary = report_generator.render_telegram_summary(report, repo_url=repo_url, date_str=date_str)
+    if top_setups:
+        summary += "\n\nTop setups:\n"
+        for s in top_setups:
+            sign = "+" if s["distance"] >= 0 else ""
+            summary += (f"- {s['label']}: {s['bias'].upper()} -> {s['target_level']} "
+                        f"({sign}{s['distance']:.2f} away)\n")
     summary_path = os.path.join(reports_dir, "latest_telegram_summary.txt")
     with open(summary_path, "w") as f:
         f.write(summary)
