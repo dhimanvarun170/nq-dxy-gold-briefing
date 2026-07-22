@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "session": "asia",
+    "session_label": "Asia Pre-Session",
+    "session_window_utc": "23:00-08:00",
+    "generated_at_utc": "2026-07-22T07:59:37.117583+00:00",
+    "generated_at_display_tz": "2026-07-22T13:29:37.117583+05:30",
+    "display_timezone": "Asia/Kolkata"
+  },
+  "macro": {
+    "ok": true,
+    "reason": null,
+    "high_impact_next_window": [
+      {
+        "title": "Employment Change",
+        "country": "AUD",
+        "impact": "High",
+        "time_utc": "2026-07-23T01:30:00+00:00",
+        "forecast": "16.4K",
+        "previous": "40.3K"
+      },
+      {
+        "title": "Unemployment Rate",
+        "country": "AUD",
+        "impact": "High",
+        "time_utc": "2026-07-23T01:30:00+00:00",
+        "forecast": "4.4%",
+        "previous": "4.4%"
+      }
+    ],
+    "all_upcoming_next_window": [
+      {
+        "title": "HPI y/y",
+        "country": "GBP",
+        "impact": "Low",
+        "time_utc": "2026-07-22T08:30:00+00:00",
+        "forecast": "3.2%",
+        "previous": "3.8%"
+      },
+      {
+        "title": "Crude Oil Inventories",
+        "country": "USD",
+        "impact": "Low",
+        "time_utc": "2026-07-22T14:30:00+00:00",
+        "forecast": "-2.0M",
+        "previous": "-1.7M"
+      },
+      {
+        "title": "President Trump Speaks",
+        "country": "USD",
+        "impact": "Medium",
+        "time_utc": "2026-07-22T19:00:00+00:00",
+        "forecast": "",
+        "previous": ""
+      },
+      {
+        "title": "Employment Change",
+        "country": "AUD",
+        "impact": "High",
+        "time_utc": "2026-07-23T01:30:00+00:00",
+        "forecast": "16.4K",
+        "previous": "40.3K"
+      },
+      {
+        "title": "Unemployment Rate",
+        "country": "AUD",
+        "impact": "High",
+        "time_utc": "2026-07-23T01:30:00+00:00",
+        "forecast": "4.4%",
+        "previous": "4.4%"
+      }
+    ],
+    "window_hours": 24
+  },
+  "instruments": {
+    "NQ": {
+      "ok": true,
+      "ticker_used": "NQ=F",
+      "last_price": 29054.75,
+      "prior_day_high": 29364.75,
+      "prior_day_low": 28701.0,
+      "prior_day_close": 29316.0,
+      "pct_change_vs_prior_close": -0.8911515895756583,
+      "htf_trend_ema8_vs_ema21": "down",
+      "swing_high_liquidity_pool": 29337.0,
+      "swing_low_liquidity_pool": 29025.75,
+      "fair_value_gaps": {
+        "bullish_fvg": null,
+        "bearish_fvg": {
+          "gap_low": 29077.0,
+          "gap_high": 29084.25
+        }
+      },
+      "bias": "bearish",
+      "gamma_data": {
+        "available": false,
+        "note": "No manual gamma/options data provided for this run (no free API exists for call/put walls, gamma flip, net GEX, max pain, or OI). Bias below is price-action-only. Paste your morning data into data/manual_overrides.json to layer it in."
+      }
+    },
+    "DXY": {
+      "ok": true,
+      "ticker_used": "DX-Y.NYB",
+      "last_price": 101.13899993896484,
+      "prior_day_high": 101.20999908447266,
+      "prior_day_low": 100.86000061035156,
+      "prior_day_close": 101.18000030517578,
+      "pct_change_vs_prior_close": -0.0405222040791397,
+      "htf_trend_ema8_vs_ema21": "up",
+      "swing_high_liquidity_pool": 101.20999908447266,
+      "swing_low_liquidity_pool": 101.0260009765625,
+      "fair_value_gaps": {
+        "bullish_fvg": {
+          "gap_low": 101.11100006103516,
+          "gap_high": 101.1240005493164
+        },
+        "bearish_fvg": {
+          "gap_low": 101.11100006103516,
+          "gap_high": 101.11199951171875
+        }
+      },
+      "bias": "neutral",
+      "gamma_data": {
+        "available": false,
+        "note": "DXY has no reliable options/gamma chain (thin ICE DX options market) - price action + macro/news only, by design."
+      }
+    },
+    "GC": {
+      "ok": true,
+      "ticker_used": "GC=F",
+      "last_price": 4114.7998046875,
+      "prior_day_high": 4071.10009765625,
+      "prior_day_low": 3999.699951171875,
+      "prior_day_close": 4071.10009765625,
+      "pct_change_vs_prior_close": 1.0734127381541936,
+      "htf_trend_ema8_vs_ema21": "down",
+      "swing_high_liquidity_pool": 4146.0,
+      "swing_low_liquidity_pool": 4081.0,
+      "fair_value_gaps": {
+        "bullish_fvg": {
+          "gap_low": 4135.2998046875,
+          "gap_high": 4141.2001953125
+        },
+        "bearish_fvg": {
+          "gap_low": 4118.10009765625,
+          "gap_high": 4120.2998046875
+        }
+      },
+      "bias": "neutral",
+      "gamma_data": {
+        "available": false,
+        "note": "No manual gamma/options data provided for this run (no free API exists for call/put walls, gamma flip, net GEX, max pain, or OI). Bias below is price-action-only. Paste your morning data into data/manual_overrides.json to layer it in."
+      }
+    }
+  },
+  "yields": {
+    "TNX": {
+      "ok": true,
+      "last_yield": 4.627999782562256,
+      "prev_yield": 4.5980000495910645,
+      "direction": "rising"
+    }
+  },
+  "confluence_notes": [
+    "10Y yield RISING -> headwind for Gold and NQ/growth, tailwind for DXY.",
+    "DXY and Gold biases are inversely aligned (normal relationship) - supports higher-confidence conviction on both."
+  ],
+  "final_stance": "NEUTRAL / WAIT - mixed signals, let price confirm"
+}
