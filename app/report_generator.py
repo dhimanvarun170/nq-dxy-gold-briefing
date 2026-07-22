@@ -211,7 +211,38 @@ def render_markdown(report: dict) -> str:
                   "This is a bias/context briefing, not a signal or execution recommendation._")
 
     return "\n".join(lines)
+def render_full_watchlist_markdown(watchlist: list[dict], top_setups: list[dict]) -> str:
+    lines = ["---", "## Full Watchlist — D/W/M Levels & Sweep Status", ""]
+    lines.append("_Distances shown are plain points/price away from spot, not percentages. "
+                  "'Swept today' means today's session has already traded through that level._")
+    lines.append("")
+    for inst in watchlist:
+        if not inst.get("ok"):
+            lines.append(f"### {inst.get('label', inst.get('key'))}")
+            lines.append(f"Data unavailable this run.\n")
+            continue
+        lines.append(f"### {inst['label']} — bias: {inst['bias'].upper()} — spot {_fmt(inst['spot'])}")
+        for lvl in inst["levels"]:
+            tag = "SWEPT" if lvl["swept_today"] else "not swept"
+            sign = "+" if lvl["distance"] >= 0 else ""
+            lines.append(f"- {lvl['name']}: {_fmt(lvl['value'])} "
+                          f"({sign}{_fmt(lvl['distance'])} away) — {tag}")
+        lines.append("")
 
+    lines.append("---")
+    lines.append("## Top Setups (from this watchlist)")
+    if not top_setups:
+        lines.append("No clear-bias / unswept-level setups this run.")
+    else:
+        for i, s in enumerate(top_setups, 1):
+            sign = "+" if s["distance"] >= 0 else ""
+            lines.append(
+                f"{i}. **{s['label']}** — {s['bias'].upper()}, spot {_fmt(s['spot'])}, "
+                f"targeting {s['target_level']} at {_fmt(s['target_value'])} "
+                f"({sign}{_fmt(s['distance'])} away, unswept)"
+            )
+    lines.append("")
+    return "\n".join(lines)
 def render_telegram_summary(report: dict, repo_url: str = "", date_str: str = "") -> str:
     meta = report["meta"]
     nq, dxy, gc = report["instruments"]["NQ"], report["instruments"]["DXY"], report["instruments"]["GC"]
