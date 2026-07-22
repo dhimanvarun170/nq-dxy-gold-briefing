@@ -159,4 +159,4 @@ def main():
     p_show.add_argument("--date", required=True, help="YYYY-MM-DD")
     p_show.add_argument("--session", required=True, choices=["asia", "ny"])
 
-    sub.add_parser("check-levels", help="Check D/W/M OHLC levels and alert
+    sub.add_parser("check-levels", help="Check D/W/M OHLC levels and alert on touch")
