@@ -68,7 +68,7 @@ def cmd_generate(session: str, cfg: dict):
         log.error(f"Unexpected error during macro fetch: {e}")
         macro_data = {"ok": False, "reason": str(e), "events": []}
 
-   report = report_generator.build_report(session, cfg, fetch_data, macro_data, overrides)
+    report = report_generator.build_report(session, cfg, fetch_data, macro_data, overrides)
     markdown = report_generator.render_markdown(report)
 
     top_setups = []
@@ -159,26 +159,4 @@ def main():
     p_show.add_argument("--date", required=True, help="YYYY-MM-DD")
     p_show.add_argument("--session", required=True, choices=["asia", "ny"])
 
-    sub.add_parser("check-levels", help="Check D/W/M OHLC levels and alert on touch")
-
-    args = parser.parse_args()
-    cfg = load_config()
-
-    if args.command == "generate":
-        cmd_generate(args.session, cfg)
-    elif args.command == "latest":
-        cmd_latest(cfg)
-    elif args.command == "history":
-        cmd_history(cfg, args.n)
-    elif args.command == "show":
-        cmd_show(cfg, args.date, args.session)
-    elif args.command == "check-levels":
-        cmd_check_levels(cfg)
-
-
-if __name__ == "__main__":
-    try:
-        main()
-    except Exception as e:
-        log.error(f"Fatal error: {e}")
-        sys.exit(1)
+    sub.add_parser("check-levels", help="Check D/W/M OHLC levels and alert
