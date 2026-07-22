@@ -71,6 +71,8 @@ def cmd_generate(session: str, cfg: dict):
     report = report_generator.build_report(session, cfg, fetch_data, macro_data, overrides)
     markdown = report_generator.render_markdown(report)
 
+    # Full watchlist: D/W/M levels, sweep status, best-effort headline, top setups.
+    # Kept separate/best-effort so a failure here never breaks the core NQ/DXY/Gold report above.
     top_setups = []
     try:
         watchlist = level_watch.analyze_full_watchlist(cfg)
@@ -95,8 +97,11 @@ def cmd_generate(session: str, cfg: dict):
     print(f"\n[saved] {md_path}")
     print(f"[saved] {json_path}")
 
+    # Short Telegram-friendly summary, written for the workflow to pick up
+    # and send via the Telegram Bot API. Harmless/no-op if Telegram isn't
+    # configured - the workflow step that sends it simply won't run.
     date_str = dt.datetime.now(dt.timezone.utc).date().isoformat()
-    repo_slug = os.environ.get("GITHUB_REPOSITORY", "")
+    repo_slug = os.environ.get("GITHUB_REPOSITORY", "")  # e.g. "user/repo", set automatically in Actions
     repo_url = f"https://github.com/{repo_slug}" if repo_slug else ""
     summary = report_generator.render_telegram_summary(report, repo_url=repo_url, date_str=date_str)
     if top_setups:
@@ -160,3 +165,25 @@ def main():
     p_show.add_argument("--session", required=True, choices=["asia", "ny"])
 
     sub.add_parser("check-levels", help="Check D/W/M OHLC levels and alert on touch")
+
+    args = parser.parse_args()
+    cfg = load_config()
+
+    if args.command == "generate":
+        cmd_generate(args.session, cfg)
+    elif args.command == "latest":
+        cmd_latest(cfg)
+    elif args.command == "history":
+        cmd_history(cfg, args.n)
+    elif args.command == "show":
+        cmd_show(cfg, args.date, args.session)
+    elif args.command == "check-levels":
+        cmd_check_levels(cfg)
+
+
+if __name__ == "__main__":
+    try:
+        main()
+    except Exception as e:
+        log.error(f"Fatal error: {e}")
+        sys.exit(1)
