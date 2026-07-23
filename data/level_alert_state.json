@@ -2,7 +2,8 @@
   "date": "2026-07-23",
   "triggered": {
     "NQ": [
-      "Prior Day Low"
+      "Prior Day Low",
+      "Prior Week Close"
     ],
     "DXY": [
       "Prior Day Low",
