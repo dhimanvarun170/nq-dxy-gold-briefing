@@ -17,7 +17,8 @@
       "Prior Day High",
       "Prior Month Close",
       "Prior Day Low",
-      "Prior Day Close"
+      "Prior Day Close",
+      "Prior Week Low"
     ],
     "GBPUSD": [
       "Prior Day Close",
