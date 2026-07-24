@@ -2,7 +2,9 @@
   "date": "2026-07-24",
   "triggered": {
     "NQ": [
-      "Prior Day Close"
+      "Prior Day Close",
+      "Prior Day Low",
+      "Prior Week Low"
     ],
     "DXY": [
       "Prior Day Close",
@@ -28,6 +30,8 @@
       "Prior Day Close"
     ],
     "US10Y_YIELD": [],
-    "US10Y_NOTE_FUT": []
+    "US10Y_NOTE_FUT": [
+      "Prior Day High"
+    ]
   }
 }
