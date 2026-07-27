@@ -2,7 +2,12 @@
   "date": "2026-07-27",
   "triggered": {
     "NQ": [],
-    "DXY": [],
+    "DXY": [
+      "Prior Day High",
+      "Prior Day Close",
+      "Prior Week High",
+      "Prior Week Close"
+    ],
     "GOLD_FUT": [],
     "GOLD_SPOT": [],
     "SILVER_FUT": [],
@@ -10,7 +15,9 @@
     "OIL_FUT": [],
     "EURUSD": [
       "Prior Day Close",
-      "Prior Week Close"
+      "Prior Week Close",
+      "Prior Day Low",
+      "Prior Week Low"
     ],
     "GBPUSD": [
       "Prior Day Low",
