@@ -1,14 +1,14 @@
-📊 Asia Pre-Session — 2026-07-29
+📊 NY Pre-Session — 2026-07-29
 
-NQ: NEUTRAL (27,973.75)
-DXY: NEUTRAL (101.33)
-Gold: BULLISH (4,092.90)
-10Y yield: FALLING
+NQ: BEARISH (27,660.25)
+DXY: NEUTRAL (101.37)
+Gold: BULLISH (4,100.00)
+10Y yield: RISING
 
 FINAL STANCE: NEUTRAL / WAIT - mixed signals, let price confirm
 
-Full report: https://github.com/dhimanvarun170/nq-dxy-gold-briefing/blob/main/reports/2026-07-29-asia.md
+Full report: https://github.com/dhimanvarun170/nq-dxy-gold-briefing/blob/main/reports/2026-07-29-ny.md
 
 Top setups:
-- US 10-Year T-Note Futures: BEARISH -> Prior Day Close (-0.14 away)
-- WTI Crude Oil Futures: BULLISH -> Prior Day Close (+2.92 away)
+- US 10-Year Treasury Yield: BULLISH -> Prior Day High (-0.02 away)
+- USD/JPY: BULLISH -> Prior Day High (-0.16 away)
