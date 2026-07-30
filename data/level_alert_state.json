@@ -1,7 +1,9 @@
 {
   "date": "2026-07-30",
   "triggered": {
-    "NQ": [],
+    "NQ": [
+      "Prior Day High"
+    ],
     "DXY": [
       "Prior Day Low",
       "Prior Week Low"
@@ -14,7 +16,10 @@
     "EURUSD": [
       "Prior Week High"
     ],
-    "GBPUSD": [],
+    "GBPUSD": [
+      "Prior Week High",
+      "Prior Month High"
+    ],
     "USDJPY": [
       "Prior Day Close",
       "Prior Week Close"
