@@ -25,7 +25,8 @@
       "Prior Week Close"
     ],
     "BTC": [
-      "Prior Day Close"
+      "Prior Day Close",
+      "Prior Day High"
     ],
     "US10Y_YIELD": [
       "Prior Week Close"
