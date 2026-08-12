@@ -21,7 +21,9 @@
       "Prior Day Low",
       "Prior Day Close",
       "Prior Month High",
-      "Prior Day High"
+      "Prior Day High",
+      "Prior Week Close",
+      "Prior Month Close"
     ],
     "GBPUSD": [
       "Prior Day High",
@@ -37,7 +39,9 @@
     "BTC": [
       "Prior Day Low"
     ],
-    "US10Y_YIELD": [],
+    "US10Y_YIELD": [
+      "Prior Day Close"
+    ],
     "US10Y_NOTE_FUT": [
       "Prior Day Close",
       "Prior Day High",
