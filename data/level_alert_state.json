@@ -8,7 +8,8 @@
       "Prior Day High",
       "Prior Day Close",
       "Prior Month Close",
-      "Prior Month Low"
+      "Prior Month Low",
+      "Prior Week High"
     ],
     "GOLD_FUT": [],
     "GOLD_SPOT": [],
