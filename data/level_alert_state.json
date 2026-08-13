@@ -1,13 +1,22 @@
 {
   "date": "2026-08-13",
   "triggered": {
-    "NQ": [],
+    "NQ": [
+      "Prior Day Close",
+      "Prior Week Close"
+    ],
     "DXY": [
       "Prior Day High",
-      "Prior Day Close"
+      "Prior Day Close",
+      "Prior Month Low",
+      "Prior Month Close"
     ],
-    "GOLD_FUT": [],
-    "GOLD_SPOT": [],
+    "GOLD_FUT": [
+      "Prior Day High"
+    ],
+    "GOLD_SPOT": [
+      "Prior Day High"
+    ],
     "SILVER_FUT": [
       "Prior Day Low",
       "Prior Day Close"
@@ -21,7 +30,8 @@
       "Prior Day Low",
       "Prior Week Close",
       "Prior Month High",
-      "Prior Month Close"
+      "Prior Month Close",
+      "Prior Day Close"
     ],
     "GBPUSD": [
       "Prior Day Low",
