@@ -27,7 +27,9 @@
       "Prior Day Close",
       "Prior Week High"
     ],
-    "OIL_FUT": [],
+    "OIL_FUT": [
+      "Prior Week High"
+    ],
     "EURUSD": [
       "Prior Day Low",
       "Prior Week Close",
@@ -52,7 +54,9 @@
     ],
     "US10Y_NOTE_FUT": [
       "Prior Day Close",
-      "Prior Week Close"
+      "Prior Week Close",
+      "Prior Day High",
+      "Prior Week High"
     ]
   }
 }
