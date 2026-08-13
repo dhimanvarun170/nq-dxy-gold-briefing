@@ -1,14 +1,14 @@
-📊 Asia Pre-Session — 2026-08-13
+📊 NY Pre-Session — 2026-08-13
 
-NQ: BULLISH (29,908.00)
-DXY: BEARISH (99.97)
-Gold: BULLISH (4,457.90)
+NQ: BULLISH (30,152.00)
+DXY: BEARISH (99.93)
+Gold: BULLISH (4,422.30)
 10Y yield: FALLING
 
 FINAL STANCE: BULLISH (risk-on lean)
 
-Full report: https://github.com/dhimanvarun170/nq-dxy-gold-briefing/blob/main/reports/2026-08-13-asia.md
+Full report: https://github.com/dhimanvarun170/nq-dxy-gold-briefing/blob/main/reports/2026-08-13-ny.md
 
 Top setups:
-- US Dollar Index: BEARISH -> Prior Week High (-0.09 away)
-- Silver Futures: BULLISH -> Prior Day High (-1.00 away)
+- US Dollar Index: BEARISH -> Prior Month Low (+0.24 away)
+- Gold Futures: BULLISH -> Prior Day Low (+16.00 away)
