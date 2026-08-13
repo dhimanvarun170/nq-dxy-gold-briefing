@@ -12,10 +12,14 @@
       "Prior Month Close"
     ],
     "GOLD_FUT": [
-      "Prior Day High"
+      "Prior Day High",
+      "Prior Day Low",
+      "Prior Day Close"
     ],
     "GOLD_SPOT": [
-      "Prior Day High"
+      "Prior Day High",
+      "Prior Day Low",
+      "Prior Day Close"
     ],
     "SILVER_FUT": [
       "Prior Day Low",
