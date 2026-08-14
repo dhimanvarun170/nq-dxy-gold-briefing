@@ -1,11 +1,14 @@
 {
   "date": "2026-08-14",
   "triggered": {
-    "NQ": [],
+    "NQ": [
+      "Prior Day High"
+    ],
     "DXY": [
       "Prior Day Low",
       "Prior Month Low",
-      "Prior Month Close"
+      "Prior Month Close",
+      "Prior Week Close"
     ],
     "GOLD_FUT": [],
     "GOLD_SPOT": [],
@@ -20,19 +23,22 @@
     "OIL_FUT": [],
     "EURUSD": [
       "Prior Day High",
-      "Prior Month High"
+      "Prior Month High",
+      "Prior Week High"
     ],
     "GBPUSD": [
       "Prior Day Close",
       "Prior Week High",
-      "Prior Day High"
+      "Prior Day High",
+      "Prior Month High"
     ],
     "USDJPY": [
       "Prior Day Close",
       "Prior Day Low"
     ],
     "BTC": [
-      "Prior Day Low"
+      "Prior Day Low",
+      "Prior Month Close"
     ],
     "US10Y_YIELD": [],
     "US10Y_NOTE_FUT": [
