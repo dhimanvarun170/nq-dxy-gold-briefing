@@ -15,8 +15,12 @@
     "GOLD_SPOT": [
       "Prior Week High"
     ],
-    "SILVER_FUT": [],
-    "SILVER_SPOT": [],
+    "SILVER_FUT": [
+      "Prior Week High"
+    ],
+    "SILVER_SPOT": [
+      "Prior Week High"
+    ],
     "OIL_FUT": [
       "Prior Day Close",
       "Prior Week Close"
