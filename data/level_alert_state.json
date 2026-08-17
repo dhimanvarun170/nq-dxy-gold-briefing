@@ -33,7 +33,9 @@
     "USDJPY": [
       "Prior Day Low",
       "Prior Day Close",
-      "Prior Week Close"
+      "Prior Week Close",
+      "Prior Day High",
+      "Prior Week High"
     ],
     "BTC": [
       "Prior Day High"
