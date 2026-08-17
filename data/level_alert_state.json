@@ -1,7 +1,10 @@
 {
   "date": "2026-08-17",
   "triggered": {
-    "NQ": [],
+    "NQ": [
+      "Prior Day High",
+      "Prior Week High"
+    ],
     "DXY": [
       "Prior Day Low",
       "Prior Week Low"
@@ -28,7 +31,9 @@
       "Prior Month High"
     ],
     "USDJPY": [],
-    "BTC": [],
+    "BTC": [
+      "Prior Day High"
+    ],
     "US10Y_YIELD": [],
     "US10Y_NOTE_FUT": [
       "Prior Day Low",
