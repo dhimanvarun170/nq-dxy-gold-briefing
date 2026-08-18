@@ -16,13 +16,15 @@
       "Prior Day High",
       "Prior Week High",
       "Prior Day Close",
-      "Prior Day Low"
+      "Prior Day Low",
+      "Prior Week Close"
     ],
     "GOLD_SPOT": [
       "Prior Day High",
       "Prior Week High",
       "Prior Day Close",
-      "Prior Day Low"
+      "Prior Day Low",
+      "Prior Week Close"
     ],
     "SILVER_FUT": [
       "Prior Day Low",
