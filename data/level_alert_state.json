@@ -24,11 +24,13 @@
     ],
     "SILVER_FUT": [
       "Prior Day Low",
-      "Prior Week Close"
+      "Prior Week Close",
+      "Prior Week Low"
     ],
     "SILVER_SPOT": [
       "Prior Day Low",
-      "Prior Week Close"
+      "Prior Week Close",
+      "Prior Week Low"
     ],
     "OIL_FUT": [
       "Prior Month Close",
@@ -54,7 +56,8 @@
     ],
     "BTC": [],
     "US10Y_YIELD": [
-      "Prior Month High"
+      "Prior Month High",
+      "Prior Week High"
     ],
     "US10Y_NOTE_FUT": [
       "Prior Day Low",
