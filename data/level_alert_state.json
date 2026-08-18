@@ -9,7 +9,8 @@
       "Prior Week Low",
       "Prior Day Close",
       "Prior Week Close",
-      "Prior Month Low"
+      "Prior Month Low",
+      "Prior Day High"
     ],
     "GOLD_FUT": [
       "Prior Day High",
@@ -46,7 +47,8 @@
     "USDJPY": [
       "Prior Day High",
       "Prior Week High",
-      "Prior Week Close"
+      "Prior Week Close",
+      "Prior Day Close"
     ],
     "BTC": [],
     "US10Y_YIELD": [],
