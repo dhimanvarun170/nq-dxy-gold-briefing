@@ -18,10 +18,12 @@
       "Prior Week High"
     ],
     "SILVER_FUT": [
-      "Prior Day Low"
+      "Prior Day Low",
+      "Prior Week Close"
     ],
     "SILVER_SPOT": [
-      "Prior Day Low"
+      "Prior Day Low",
+      "Prior Week Close"
     ],
     "OIL_FUT": [
       "Prior Month Close",
