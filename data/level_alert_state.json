@@ -43,7 +43,8 @@
     "EURUSD": [
       "Prior Day Low",
       "Prior Day Close",
-      "Prior Week High"
+      "Prior Week High",
+      "Prior Day High"
     ],
     "GBPUSD": [
       "Prior Day Low",
