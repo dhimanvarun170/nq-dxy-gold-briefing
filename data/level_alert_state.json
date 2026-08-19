@@ -9,7 +9,9 @@
       "Prior Day High",
       "Prior Day Close",
       "Prior Week Close",
-      "Prior Month Low"
+      "Prior Month Low",
+      "Prior Day Low",
+      "Prior Week Low"
     ],
     "GOLD_FUT": [],
     "GOLD_SPOT": [],
@@ -18,7 +20,8 @@
     "OIL_FUT": [
       "Prior Month Close",
       "Prior Day High",
-      "Prior Week High"
+      "Prior Week High",
+      "Prior Day Low"
     ],
     "EURUSD": [
       "Prior Day High",
@@ -29,7 +32,8 @@
       "Prior Day Low",
       "Prior Week High",
       "Prior Month High",
-      "Prior Day Close"
+      "Prior Day Close",
+      "Prior Day High"
     ],
     "USDJPY": [
       "Prior Day High",
