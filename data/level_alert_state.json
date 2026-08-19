@@ -22,7 +22,8 @@
       "Prior Month Close",
       "Prior Day High",
       "Prior Week High",
-      "Prior Day Low"
+      "Prior Day Low",
+      "Prior Day Close"
     ],
     "EURUSD": [
       "Prior Day High",
