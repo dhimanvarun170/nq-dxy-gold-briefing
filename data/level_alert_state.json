@@ -48,7 +48,8 @@
       "Prior Week High",
       "Prior Week Close",
       "Prior Day Low",
-      "Prior Day Close"
+      "Prior Day Close",
+      "Prior Month Low"
     ],
     "BTC": [
       "Prior Day High",
