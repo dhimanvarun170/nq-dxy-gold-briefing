@@ -1,7 +1,9 @@
 {
   "date": "2026-08-19",
   "triggered": {
-    "NQ": [],
+    "NQ": [
+      "Prior Week Low"
+    ],
     "DXY": [
       "Prior Day High",
       "Prior Day Close",
@@ -18,12 +20,14 @@
     ],
     "EURUSD": [
       "Prior Day High",
-      "Prior Day Close"
+      "Prior Day Close",
+      "Prior Week High"
     ],
     "GBPUSD": [
       "Prior Day Low",
       "Prior Week High",
-      "Prior Month High"
+      "Prior Month High",
+      "Prior Day Close"
     ],
     "USDJPY": [
       "Prior Day High",
@@ -41,7 +45,8 @@
     ],
     "US10Y_NOTE_FUT": [
       "Prior Week Close",
-      "Prior Day Close"
+      "Prior Day Close",
+      "Prior Day High"
     ]
   }
 }
