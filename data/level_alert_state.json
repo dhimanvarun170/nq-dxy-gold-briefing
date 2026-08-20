@@ -3,7 +3,8 @@
   "triggered": {
     "NQ": [
       "Prior Day Close",
-      "Prior Week Low"
+      "Prior Week Low",
+      "Prior Day Low"
     ],
     "DXY": [
       "Prior Day Low",
@@ -37,7 +38,8 @@
     "USDJPY": [],
     "BTC": [],
     "US10Y_YIELD": [
-      "Prior Week High"
+      "Prior Week High",
+      "Prior Week Close"
     ],
     "US10Y_NOTE_FUT": [
       "Prior Day High",
