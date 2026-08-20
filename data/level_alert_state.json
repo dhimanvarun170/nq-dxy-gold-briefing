@@ -8,8 +8,12 @@
     ],
     "GOLD_FUT": [],
     "GOLD_SPOT": [],
-    "SILVER_FUT": [],
-    "SILVER_SPOT": [],
+    "SILVER_FUT": [
+      "Prior Day High"
+    ],
+    "SILVER_SPOT": [
+      "Prior Day High"
+    ],
     "OIL_FUT": [
       "Prior Day Close",
       "Prior Day Low",
