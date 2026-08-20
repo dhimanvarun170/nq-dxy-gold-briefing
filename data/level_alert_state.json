@@ -23,7 +23,9 @@
     "EURUSD": [
       "Prior Day High"
     ],
-    "GBPUSD": [],
+    "GBPUSD": [
+      "Prior Day High"
+    ],
     "USDJPY": [],
     "BTC": [],
     "US10Y_YIELD": [],
