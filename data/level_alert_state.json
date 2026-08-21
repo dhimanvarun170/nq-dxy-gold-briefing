@@ -13,7 +13,9 @@
     "SILVER_FUT": [],
     "SILVER_SPOT": [],
     "OIL_FUT": [],
-    "EURUSD": [],
+    "EURUSD": [
+      "Prior Day High"
+    ],
     "GBPUSD": [
       "Prior Day High"
     ],
