@@ -14,7 +14,8 @@
     "OIL_FUT": [],
     "EURUSD": [
       "Prior Day Close",
-      "Prior Week Close"
+      "Prior Week Close",
+      "Prior Day Low"
     ],
     "GBPUSD": [
       "Prior Day Close",
