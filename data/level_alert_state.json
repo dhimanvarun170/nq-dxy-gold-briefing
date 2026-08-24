@@ -21,7 +21,8 @@
     ],
     "USDJPY": [
       "Prior Day Close",
-      "Prior Week Close"
+      "Prior Week Close",
+      "Prior Day High"
     ],
     "BTC": [],
     "US10Y_YIELD": [],
