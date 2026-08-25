@@ -28,7 +28,8 @@
     ],
     "GBPUSD": [
       "Prior Week Close",
-      "Prior Day Low"
+      "Prior Day Low",
+      "Prior Day Close"
     ],
     "USDJPY": [
       "Prior Day High"
@@ -37,7 +38,8 @@
     "US10Y_YIELD": [],
     "US10Y_NOTE_FUT": [
       "Prior Day Close",
-      "Prior Week Close"
+      "Prior Week Close",
+      "Prior Day High"
     ]
   }
 }
