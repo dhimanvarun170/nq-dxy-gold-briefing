@@ -9,8 +9,12 @@
       "Prior Day High",
       "Prior Day Close"
     ],
-    "GOLD_FUT": [],
-    "GOLD_SPOT": [],
+    "GOLD_FUT": [
+      "Prior Day High"
+    ],
+    "GOLD_SPOT": [
+      "Prior Day High"
+    ],
     "SILVER_FUT": [
       "Prior Day Close",
       "Prior Week Close"
@@ -25,12 +29,14 @@
     ],
     "EURUSD": [
       "Prior Day Low",
-      "Prior Day Close"
+      "Prior Day Close",
+      "Prior Week Close"
     ],
     "GBPUSD": [
       "Prior Week Close",
       "Prior Day Low",
-      "Prior Day Close"
+      "Prior Day Close",
+      "Prior Day High"
     ],
     "USDJPY": [
       "Prior Day High"
