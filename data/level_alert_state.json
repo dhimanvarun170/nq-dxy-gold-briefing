@@ -45,7 +45,9 @@
       "Prior Day High",
       "Prior Week High"
     ],
-    "US10Y_YIELD": [],
+    "US10Y_YIELD": [
+      "Prior Week Low"
+    ],
     "US10Y_NOTE_FUT": [
       "Prior Day Close",
       "Prior Week Close",
