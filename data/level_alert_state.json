@@ -6,7 +6,8 @@
       "Prior Week Low"
     ],
     "DXY": [
-      "Prior Day Close"
+      "Prior Day Close",
+      "Prior Day Low"
     ],
     "GOLD_FUT": [],
     "GOLD_SPOT": [],
