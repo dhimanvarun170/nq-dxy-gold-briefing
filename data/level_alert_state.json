@@ -26,7 +26,8 @@
     ],
     "OIL_FUT": [
       "Prior Day Low",
-      "Prior Week Low"
+      "Prior Week Low",
+      "Prior Day Close"
     ],
     "EURUSD": [
       "Prior Day High",
