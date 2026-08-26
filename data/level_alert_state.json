@@ -1,61 +1,41 @@
 {
-  "date": "2026-08-25",
+  "date": "2026-08-26",
   "triggered": {
-    "NQ": [
-      "Prior Week Low",
-      "Prior Week Close"
-    ],
+    "NQ": [],
     "DXY": [
-      "Prior Day High",
       "Prior Day Close"
     ],
-    "GOLD_FUT": [
-      "Prior Day High"
-    ],
-    "GOLD_SPOT": [
-      "Prior Day High"
-    ],
+    "GOLD_FUT": [],
+    "GOLD_SPOT": [],
     "SILVER_FUT": [
-      "Prior Day Close",
-      "Prior Week Close"
+      "Prior Day Low",
+      "Prior Day Close"
     ],
     "SILVER_SPOT": [
+      "Prior Day Low",
+      "Prior Day Close"
+    ],
+    "OIL_FUT": [],
+    "EURUSD": [
+      "Prior Day High",
       "Prior Day Close",
       "Prior Week Close"
     ],
-    "OIL_FUT": [
-      "Prior Day Low",
-      "Prior Day Close"
-    ],
-    "EURUSD": [
-      "Prior Day Low",
-      "Prior Day Close",
-      "Prior Week Close",
-      "Prior Day High"
-    ],
     "GBPUSD": [
-      "Prior Week Close",
-      "Prior Day Low",
+      "Prior Day High",
       "Prior Day Close",
-      "Prior Day High"
+      "Prior Week Close"
     ],
     "USDJPY": [
-      "Prior Day High",
-      "Prior Day Low",
-      "Prior Day Close"
+      "Prior Day High"
     ],
     "BTC": [
-      "Prior Day High",
-      "Prior Week High",
-      "Prior Day Close"
+      "Prior Week Close"
     ],
     "US10Y_YIELD": [
       "Prior Week Low"
     ],
     "US10Y_NOTE_FUT": [
-      "Prior Day Close",
-      "Prior Week Close",
-      "Prior Day High",
       "Prior Week High"
     ]
   }
