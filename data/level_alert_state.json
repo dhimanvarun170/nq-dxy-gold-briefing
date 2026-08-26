@@ -2,7 +2,8 @@
   "date": "2026-08-26",
   "triggered": {
     "NQ": [
-      "Prior Day Close"
+      "Prior Day Close",
+      "Prior Week Low"
     ],
     "DXY": [
       "Prior Day Close"
@@ -36,7 +37,8 @@
     "USDJPY": [
       "Prior Day High",
       "Prior Day Low",
-      "Prior Week Close"
+      "Prior Week Close",
+      "Prior Day Close"
     ],
     "BTC": [
       "Prior Week Close",
