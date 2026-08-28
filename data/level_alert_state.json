@@ -3,7 +3,8 @@
   "triggered": {
     "NQ": [],
     "DXY": [
-      "Prior Day Close"
+      "Prior Day Close",
+      "Prior Day High"
     ],
     "GOLD_FUT": [],
     "GOLD_SPOT": [],
@@ -16,19 +17,25 @@
     "OIL_FUT": [],
     "EURUSD": [
       "Prior Day High",
-      "Prior Day Close"
+      "Prior Day Close",
+      "Prior Day Low"
     ],
     "GBPUSD": [
       "Prior Day High",
-      "Prior Day Close"
+      "Prior Day Close",
+      "Prior Day Low"
     ],
     "USDJPY": [
-      "Prior Day High"
+      "Prior Day High",
+      "Prior Week High"
     ],
     "BTC": [],
     "US10Y_YIELD": [
       "Prior Day High"
     ],
-    "US10Y_NOTE_FUT": []
+    "US10Y_NOTE_FUT": [
+      "Prior Week Low",
+      "Prior Week Close"
+    ]
   }
 }
