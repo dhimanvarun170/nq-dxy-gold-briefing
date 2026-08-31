@@ -1,7 +1,10 @@
 {
   "date": "2026-08-31",
   "triggered": {
-    "NQ": [],
+    "NQ": [
+      "Prior Day Close",
+      "Prior Week Close"
+    ],
     "DXY": [],
     "GOLD_FUT": [
       "Prior Day Close",
