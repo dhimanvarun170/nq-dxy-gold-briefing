@@ -13,11 +13,13 @@
     ],
     "GOLD_FUT": [
       "Prior Day Close",
-      "Prior Month Close"
+      "Prior Month Close",
+      "Prior Day Low"
     ],
     "GOLD_SPOT": [
       "Prior Day Close",
-      "Prior Month Close"
+      "Prior Month Close",
+      "Prior Day Low"
     ],
     "SILVER_FUT": [],
     "SILVER_SPOT": [],
@@ -45,8 +47,13 @@
       "Prior Month High",
       "Prior Month Close"
     ],
-    "BTC": [],
-    "US10Y_YIELD": [],
+    "BTC": [
+      "Prior Week Close"
+    ],
+    "US10Y_YIELD": [
+      "Prior Day High",
+      "Prior Month High"
+    ],
     "US10Y_NOTE_FUT": []
   }
 }
