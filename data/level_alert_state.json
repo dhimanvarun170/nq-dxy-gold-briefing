@@ -9,7 +9,8 @@
     ],
     "DXY": [
       "Prior Day Close",
-      "Prior Month Close"
+      "Prior Month Close",
+      "Prior Day High"
     ],
     "GOLD_FUT": [
       "Prior Day Close",
