@@ -24,9 +24,12 @@
     "EURUSD": [
       "Prior Day Low",
       "Prior Week Low",
-      "Prior Month Close"
+      "Prior Month Close",
+      "Prior Day Close"
     ],
-    "GBPUSD": [],
+    "GBPUSD": [
+      "Prior Day Low"
+    ],
     "USDJPY": [
       "Prior Day High",
       "Prior Day Close",
