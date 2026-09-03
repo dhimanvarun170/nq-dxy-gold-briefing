@@ -32,7 +32,9 @@
     "GBPUSD": [
       "Prior Day Low",
       "Prior Day High",
-      "Prior Day Close"
+      "Prior Day Close",
+      "Prior Week Low",
+      "Prior Month Close"
     ],
     "USDJPY": [
       "Prior Week Low"
