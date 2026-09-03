@@ -20,7 +20,9 @@
       "Prior Week Low",
       "Prior Month Close"
     ],
-    "OIL_FUT": [],
+    "OIL_FUT": [
+      "Prior Day High"
+    ],
     "EURUSD": [
       "Prior Day Close",
       "Prior Week Low",
@@ -28,7 +30,9 @@
       "Prior Day High"
     ],
     "GBPUSD": [
-      "Prior Day Low"
+      "Prior Day Low",
+      "Prior Day High",
+      "Prior Day Close"
     ],
     "USDJPY": [
       "Prior Week Low"
@@ -38,7 +42,8 @@
     ],
     "US10Y_YIELD": [
       "Prior Day High",
-      "Prior Day Close"
+      "Prior Day Close",
+      "Prior Month Close"
     ],
     "US10Y_NOTE_FUT": [
       "Prior Day Low",
