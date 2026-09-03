@@ -12,8 +12,14 @@
     "GOLD_SPOT": [
       "Prior Week Close"
     ],
-    "SILVER_FUT": [],
-    "SILVER_SPOT": [],
+    "SILVER_FUT": [
+      "Prior Week Low",
+      "Prior Month Close"
+    ],
+    "SILVER_SPOT": [
+      "Prior Week Low",
+      "Prior Month Close"
+    ],
     "OIL_FUT": [],
     "EURUSD": [
       "Prior Day Close",
