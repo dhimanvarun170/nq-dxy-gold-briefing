@@ -2,7 +2,8 @@
   "date": "2026-09-04",
   "triggered": {
     "NQ": [
-      "Prior Month Close"
+      "Prior Month Close",
+      "Prior Day High"
     ],
     "DXY": [
       "Prior Day Close"
@@ -31,7 +32,9 @@
     "USDJPY": [],
     "BTC": [],
     "US10Y_YIELD": [
-      "Prior Month Close"
+      "Prior Month Close",
+      "Prior Day High",
+      "Prior Month High"
     ],
     "US10Y_NOTE_FUT": [
       "Prior Day Close",
