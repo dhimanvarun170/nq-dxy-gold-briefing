@@ -7,8 +7,12 @@
     "DXY": [
       "Prior Day Close"
     ],
-    "GOLD_FUT": [],
-    "GOLD_SPOT": [],
+    "GOLD_FUT": [
+      "Prior Day High"
+    ],
+    "GOLD_SPOT": [
+      "Prior Day High"
+    ],
     "SILVER_FUT": [
       "Prior Day High"
     ],
