@@ -3,7 +3,8 @@
   "triggered": {
     "NQ": [
       "Prior Month Close",
-      "Prior Day High"
+      "Prior Day High",
+      "Prior Day Close"
     ],
     "DXY": [
       "Prior Day Close"
