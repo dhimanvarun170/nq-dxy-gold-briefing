@@ -1,14 +1,14 @@
-📊 NY Pre-Session — 2026-09-04
+📊 Asia Pre-Session — 2026-09-07
 
-NQ: NEUTRAL (29,568.50)
-DXY: NEUTRAL (99.08)
-Gold: NEUTRAL (4,484.80)
+NQ: BEARISH (29,565.25)
+DXY: BEARISH (99.11)
+Gold: BULLISH (4,476.60)
 10Y yield: RISING
 
 FINAL STANCE: NEUTRAL / WAIT - mixed signals, let price confirm
 
-Full report: https://github.com/dhimanvarun170/nq-dxy-gold-briefing/blob/main/reports/2026-09-04-ny.md
+Full report: https://github.com/dhimanvarun170/nq-dxy-gold-briefing/blob/main/reports/2026-09-07-asia.md
 
 Top setups:
-- EUR/USD: BULLISH -> Prior Week Close (-0.00 away)
-- GBP/USD: BULLISH -> Prior Day Close (+0.00 away)
+- WTI Crude Oil Futures: BULLISH -> Prior Day Close (+0.00 away)
+- US 10-Year Treasury Yield: BULLISH -> Prior Day Low (+0.05 away)
