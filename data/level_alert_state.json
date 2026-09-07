@@ -21,10 +21,14 @@
       "Prior Day Close",
       "Prior Week Close"
     ],
-    "GBPUSD": [],
+    "GBPUSD": [
+      "Prior Day Close",
+      "Prior Week Close"
+    ],
     "USDJPY": [],
     "BTC": [
-      "Prior Day Close"
+      "Prior Day Close",
+      "Prior Week Close"
     ],
     "US10Y_YIELD": [],
     "US10Y_NOTE_FUT": [
