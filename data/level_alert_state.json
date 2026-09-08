@@ -3,7 +3,8 @@
   "triggered": {
     "NQ": [
       "Prior Day Close",
-      "Prior Week Close"
+      "Prior Week Close",
+      "Prior Month Close"
     ],
     "DXY": [
       "Prior Day Close",
@@ -34,13 +35,15 @@
     "GBPUSD": [
       "Prior Day High",
       "Prior Week Close",
-      "Prior Month Close"
+      "Prior Month Close",
+      "Prior Day Close"
     ],
     "USDJPY": [
       "Prior Day Low"
     ],
     "BTC": [
-      "Prior Day Low"
+      "Prior Day Low",
+      "Prior Month Close"
     ],
     "US10Y_YIELD": [],
     "US10Y_NOTE_FUT": [
