@@ -7,7 +7,9 @@
     ],
     "DXY": [
       "Prior Day Close",
-      "Prior Week Close"
+      "Prior Week Close",
+      "Prior Day Low",
+      "Prior Week Low"
     ],
     "GOLD_FUT": [],
     "GOLD_SPOT": [],
@@ -20,7 +22,8 @@
     "EURUSD": [
       "Prior Day High",
       "Prior Week High",
-      "Prior Week Close"
+      "Prior Week Close",
+      "Prior Day Close"
     ],
     "GBPUSD": [
       "Prior Day High",
