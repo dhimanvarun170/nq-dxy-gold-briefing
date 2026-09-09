@@ -5,7 +5,8 @@
       "Prior Month Close"
     ],
     "DXY": [
-      "Prior Week Low"
+      "Prior Week Low",
+      "Prior Day Low"
     ],
     "GOLD_FUT": [],
     "GOLD_SPOT": [],
@@ -24,7 +25,8 @@
     ],
     "GBPUSD": [
       "Prior Day Close",
-      "Prior Month Close"
+      "Prior Month Close",
+      "Prior Day High"
     ],
     "USDJPY": [],
     "BTC": [
