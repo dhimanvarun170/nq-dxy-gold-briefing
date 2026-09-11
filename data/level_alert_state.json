@@ -3,15 +3,23 @@
   "triggered": {
     "NQ": [],
     "DXY": [
-      "Prior Day Close"
+      "Prior Day Close",
+      "Prior Day High",
+      "Prior Week Close"
     ],
     "GOLD_FUT": [],
     "GOLD_SPOT": [],
-    "SILVER_FUT": [],
-    "SILVER_SPOT": [],
+    "SILVER_FUT": [
+      "Prior Day High"
+    ],
+    "SILVER_SPOT": [
+      "Prior Day High"
+    ],
     "OIL_FUT": [],
     "EURUSD": [
-      "Prior Week Close"
+      "Prior Week Close",
+      "Prior Day Low",
+      "Prior Month Close"
     ],
     "GBPUSD": [
       "Prior Week Close"
