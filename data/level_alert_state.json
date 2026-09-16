@@ -30,9 +30,13 @@
       "Prior Month Low"
     ],
     "BTC": [],
-    "US10Y_YIELD": [],
+    "US10Y_YIELD": [
+      "Prior Week Close"
+    ],
     "US10Y_NOTE_FUT": [
-      "Prior Day Low"
+      "Prior Day Low",
+      "Prior Day High",
+      "Prior Day Close"
     ]
   }
 }
