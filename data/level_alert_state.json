@@ -2,7 +2,8 @@
   "date": "2026-09-16",
   "triggered": {
     "NQ": [
-      "Prior Week Close"
+      "Prior Week Close",
+      "Prior Month Close"
     ],
     "DXY": [
       "Prior Day High",
@@ -19,11 +20,13 @@
     "OIL_FUT": [],
     "EURUSD": [
       "Prior Day High",
-      "Prior Day Close"
+      "Prior Day Close",
+      "Prior Month Low"
     ],
     "GBPUSD": [
       "Prior Day Low",
-      "Prior Week Low"
+      "Prior Week Low",
+      "Prior Month Low"
     ],
     "USDJPY": [
       "Prior Day High",
