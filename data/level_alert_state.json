@@ -3,10 +3,15 @@
   "triggered": {
     "NQ": [],
     "DXY": [
+      "Prior Day High",
+      "Prior Day Close"
+    ],
+    "GOLD_FUT": [
       "Prior Day High"
     ],
-    "GOLD_FUT": [],
-    "GOLD_SPOT": [],
+    "GOLD_SPOT": [
+      "Prior Day High"
+    ],
     "SILVER_FUT": [],
     "SILVER_SPOT": [],
     "OIL_FUT": [],
@@ -24,6 +29,8 @@
     ],
     "BTC": [],
     "US10Y_YIELD": [],
-    "US10Y_NOTE_FUT": []
+    "US10Y_NOTE_FUT": [
+      "Prior Day Low"
+    ]
   }
 }
