@@ -2,14 +2,18 @@
   "date": "2026-09-17",
   "triggered": {
     "NQ": [],
-    "DXY": [],
+    "DXY": [
+      "Prior Month High"
+    ],
     "GOLD_FUT": [],
     "GOLD_SPOT": [],
     "SILVER_FUT": [
-      "Prior Week Close"
+      "Prior Week Close",
+      "Prior Day Close"
     ],
     "SILVER_SPOT": [
-      "Prior Week Close"
+      "Prior Week Close",
+      "Prior Day Close"
     ],
     "OIL_FUT": [],
     "EURUSD": [],
@@ -20,7 +24,8 @@
     "BTC": [],
     "US10Y_YIELD": [],
     "US10Y_NOTE_FUT": [
-      "Prior Day Low"
+      "Prior Day Low",
+      "Prior Day Close"
     ]
   }
 }
