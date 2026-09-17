@@ -3,7 +3,8 @@
   "triggered": {
     "NQ": [],
     "DXY": [
-      "Prior Month High"
+      "Prior Month High",
+      "Prior Day Close"
     ],
     "GOLD_FUT": [],
     "GOLD_SPOT": [],
@@ -21,7 +22,9 @@
     "USDJPY": [
       "Prior Week High"
     ],
-    "BTC": [],
+    "BTC": [
+      "Prior Day High"
+    ],
     "US10Y_YIELD": [],
     "US10Y_NOTE_FUT": [
       "Prior Day Low",
