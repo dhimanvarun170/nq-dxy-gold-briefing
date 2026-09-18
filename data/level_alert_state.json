@@ -1,16 +1,20 @@
 {
   "date": "2026-09-18",
   "triggered": {
-    "NQ": [],
+    "NQ": [
+      "Prior Week High"
+    ],
     "DXY": [
       "Prior Day Close",
       "Prior Day High"
     ],
     "GOLD_FUT": [
-      "Prior Week Close"
+      "Prior Week Close",
+      "Prior Day High"
     ],
     "GOLD_SPOT": [
-      "Prior Week Close"
+      "Prior Week Close",
+      "Prior Day High"
     ],
     "SILVER_FUT": [],
     "SILVER_SPOT": [],
@@ -24,7 +28,8 @@
     ],
     "GBPUSD": [
       "Prior Day Close",
-      "Prior Day Low"
+      "Prior Day Low",
+      "Prior Day High"
     ],
     "USDJPY": [
       "Prior Week High"
