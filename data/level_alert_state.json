@@ -25,7 +25,9 @@
       "Prior Week Close"
     ],
     "GBPUSD": [
-      "Prior Day High"
+      "Prior Day High",
+      "Prior Day Close",
+      "Prior Week Close"
     ],
     "USDJPY": [],
     "BTC": [
