@@ -7,10 +7,18 @@
     "DXY": [
       "Prior Week High"
     ],
-    "GOLD_FUT": [],
-    "GOLD_SPOT": [],
-    "SILVER_FUT": [],
-    "SILVER_SPOT": [],
+    "GOLD_FUT": [
+      "Prior Day Low"
+    ],
+    "GOLD_SPOT": [
+      "Prior Day Low"
+    ],
+    "SILVER_FUT": [
+      "Prior Day Low"
+    ],
+    "SILVER_SPOT": [
+      "Prior Day Low"
+    ],
     "OIL_FUT": [],
     "EURUSD": [
       "Prior Week Low",
