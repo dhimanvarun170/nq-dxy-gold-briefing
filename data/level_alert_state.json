@@ -32,7 +32,8 @@
     "US10Y_NOTE_FUT": [
       "Prior Day Low",
       "Prior Week Low",
-      "Prior Week Close"
+      "Prior Week Close",
+      "Prior Day Close"
     ]
   }
 }
