@@ -19,7 +19,9 @@
     "SILVER_SPOT": [
       "Prior Day Low"
     ],
-    "OIL_FUT": [],
+    "OIL_FUT": [
+      "Prior Day Low"
+    ],
     "EURUSD": [
       "Prior Week Low",
       "Prior Day Low"
