@@ -2,7 +2,9 @@
   "date": "2026-09-24",
   "triggered": {
     "NQ": [],
-    "DXY": [],
+    "DXY": [
+      "Prior Day Close"
+    ],
     "GOLD_FUT": [
       "Prior Day Low"
     ],
@@ -15,10 +17,16 @@
     "EURUSD": [
       "Prior Day Low"
     ],
-    "GBPUSD": [],
-    "USDJPY": [],
+    "GBPUSD": [
+      "Prior Day Low"
+    ],
+    "USDJPY": [
+      "Prior Week High"
+    ],
     "BTC": [],
     "US10Y_YIELD": [],
-    "US10Y_NOTE_FUT": []
+    "US10Y_NOTE_FUT": [
+      "Prior Day Close"
+    ]
   }
 }
