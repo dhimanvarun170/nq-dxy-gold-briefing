@@ -18,13 +18,17 @@
     "OIL_FUT": [],
     "EURUSD": [],
     "GBPUSD": [
-      "Prior Day Low"
+      "Prior Day Low",
+      "Prior Week Low",
+      "Prior Week Close",
+      "Prior Month Low"
     ],
     "USDJPY": [],
     "BTC": [],
     "US10Y_YIELD": [],
     "US10Y_NOTE_FUT": [
-      "Prior Week Low"
+      "Prior Week Low",
+      "Prior Day Close"
     ]
   }
 }
