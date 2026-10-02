@@ -12,10 +12,14 @@
       "Prior Day High"
     ],
     "SILVER_FUT": [
-      "Prior Day High"
+      "Prior Day High",
+      "Prior Day Low",
+      "Prior Day Close"
     ],
     "SILVER_SPOT": [
-      "Prior Day High"
+      "Prior Day High",
+      "Prior Day Low",
+      "Prior Day Close"
     ],
     "OIL_FUT": [],
     "EURUSD": [],
