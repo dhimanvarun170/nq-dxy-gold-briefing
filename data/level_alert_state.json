@@ -1,10 +1,13 @@
 {
   "date": "2026-10-06",
   "triggered": {
-    "NQ": [],
+    "NQ": [
+      "Prior Day High"
+    ],
     "DXY": [
       "Prior Day High",
-      "Prior Week High"
+      "Prior Week High",
+      "Prior Day Close"
     ],
     "GOLD_FUT": [
       "Prior Day Close",
@@ -21,10 +24,12 @@
       "Prior Week Low"
     ],
     "GBPUSD": [
-      "Prior Month Close"
+      "Prior Month Close",
+      "Prior Month Low"
     ],
     "USDJPY": [
-      "Prior Week Close"
+      "Prior Week Close",
+      "Prior Day High"
     ],
     "BTC": [],
     "US10Y_YIELD": [
@@ -32,7 +37,9 @@
     ],
     "US10Y_NOTE_FUT": [
       "Prior Day Low",
-      "Prior Month Close"
+      "Prior Month Close",
+      "Prior Day Close",
+      "Prior Week Close"
     ]
   }
 }
