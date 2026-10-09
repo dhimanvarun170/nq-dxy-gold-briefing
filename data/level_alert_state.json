@@ -14,15 +14,19 @@
     ],
     "EURUSD": [
       "Prior Day High",
-      "Prior Week Low"
+      "Prior Week Low",
+      "Prior Day Close"
     ],
     "GBPUSD": [
       "Prior Month Close",
-      "Prior Day High"
+      "Prior Day High",
+      "Prior Day Close"
     ],
     "USDJPY": [
       "Prior Day Close",
-      "Prior Week Close"
+      "Prior Week Close",
+      "Prior Day High",
+      "Prior Week High"
     ],
     "BTC": [],
     "US10Y_YIELD": [],
