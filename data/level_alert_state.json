@@ -1,9 +1,12 @@
 {
   "date": "2026-10-09",
   "triggered": {
-    "NQ": [],
+    "NQ": [
+      "Prior Month High"
+    ],
     "DXY": [
-      "Prior Day Low"
+      "Prior Day Low",
+      "Prior Week High"
     ],
     "GOLD_FUT": [],
     "GOLD_SPOT": [],
