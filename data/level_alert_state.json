@@ -19,16 +19,22 @@
     ],
     "GBPUSD": [
       "Prior Day High",
-      "Prior Month Close"
+      "Prior Month Close",
+      "Prior Day Close",
+      "Prior Week Close"
     ],
     "USDJPY": [
       "Prior Day Close",
-      "Prior Week Close"
+      "Prior Week Close",
+      "Prior Week High"
     ],
     "BTC": [
       "Prior Month Close"
     ],
     "US10Y_YIELD": [],
-    "US10Y_NOTE_FUT": []
+    "US10Y_NOTE_FUT": [
+      "Prior Day Close",
+      "Prior Week Close"
+    ]
   }
 }
