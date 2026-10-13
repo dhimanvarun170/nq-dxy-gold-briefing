@@ -12,14 +12,19 @@
       "Prior Month Close"
     ],
     "OIL_FUT": [],
-    "EURUSD": [],
+    "EURUSD": [
+      "Prior Day Low"
+    ],
     "GBPUSD": [
       "Prior Day Low",
       "Prior Day Close",
-      "Prior Week Close"
+      "Prior Week Close",
+      "Prior Month Close"
     ],
     "USDJPY": [
-      "Prior Day High"
+      "Prior Day High",
+      "Prior Day Close",
+      "Prior Week Close"
     ],
     "BTC": [],
     "US10Y_YIELD": [
