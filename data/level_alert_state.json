@@ -9,7 +9,9 @@
     "DXY": [
       "Prior Day Low",
       "Prior Week Close",
-      "Prior Day Close"
+      "Prior Day Close",
+      "Prior Day High",
+      "Prior Week High"
     ],
     "GOLD_FUT": [
       "Prior Month Close",
@@ -28,10 +30,14 @@
     ],
     "EURUSD": [
       "Prior Day High",
-      "Prior Week Close"
+      "Prior Week Close",
+      "Prior Day Low",
+      "Prior Day Close",
+      "Prior Week Low"
     ],
     "GBPUSD": [
-      "Prior Day High"
+      "Prior Day High",
+      "Prior Week Low"
     ],
     "USDJPY": [
       "Prior Day High",
@@ -41,7 +47,9 @@
     "BTC": [
       "Prior Month Close"
     ],
-    "US10Y_YIELD": [],
+    "US10Y_YIELD": [
+      "Prior Day Low"
+    ],
     "US10Y_NOTE_FUT": [
       "Prior Day High",
       "Prior Day Close",
