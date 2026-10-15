@@ -19,7 +19,8 @@
     ],
     "GBPUSD": [
       "Prior Week Close",
-      "Prior Month Close"
+      "Prior Month Close",
+      "Prior Day Close"
     ],
     "USDJPY": [
       "Prior Week Close"
