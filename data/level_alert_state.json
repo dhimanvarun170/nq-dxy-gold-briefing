@@ -10,10 +10,16 @@
     "GOLD_SPOT": [],
     "SILVER_FUT": [],
     "SILVER_SPOT": [],
-    "OIL_FUT": [],
+    "OIL_FUT": [
+      "Prior Day Low"
+    ],
     "EURUSD": [],
     "GBPUSD": [],
-    "USDJPY": [],
+    "USDJPY": [
+      "Prior Day High",
+      "Prior Day Close",
+      "Prior Week Close"
+    ],
     "BTC": [],
     "US10Y_YIELD": [],
     "US10Y_NOTE_FUT": [
