@@ -4,7 +4,9 @@
     "NQ": [],
     "DXY": [
       "Prior Week Low",
-      "Prior Month Close"
+      "Prior Month Close",
+      "Prior Day Close",
+      "Prior Month High"
     ],
     "GOLD_FUT": [],
     "GOLD_SPOT": [],
@@ -12,7 +14,8 @@
     "SILVER_SPOT": [],
     "OIL_FUT": [],
     "EURUSD": [
-      "Prior Day Close"
+      "Prior Day Close",
+      "Prior Week Close"
     ],
     "GBPUSD": [
       "Prior Day High",
@@ -23,6 +26,8 @@
       "Prior Week Close"
     ],
     "US10Y_YIELD": [],
-    "US10Y_NOTE_FUT": []
+    "US10Y_NOTE_FUT": [
+      "Prior Day Close"
+    ]
   }
 }
