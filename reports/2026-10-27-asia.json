@@ -1,0 +1,1187 @@
+{
+  "meta": {
+    "session": "asia",
+    "session_label": "Asia Pre-Session",
+    "session_window_utc": "23:00-08:00",
+    "generated_at_utc": "2026-10-27T02:20:28.006745+00:00",
+    "generated_at_display_tz": "2026-10-27T07:50:28.006745+05:30",
+    "display_timezone": "Asia/Kolkata"
+  },
+  "macro": {
+    "ok": true,
+    "reason": null,
+    "high_impact_next_window": [
+      {
+        "title": "CPI m/m",
+        "country": "AUD",
+        "impact": "High",
+        "time_utc": "2026-10-28T00:30:00+00:00",
+        "forecast": "0.7%",
+        "previous": "0.4%"
+      },
+      {
+        "title": "CPI y/y",
+        "country": "AUD",
+        "impact": "High",
+        "time_utc": "2026-10-28T00:30:00+00:00",
+        "forecast": "4.2%",
+        "previous": "4.0%"
+      },
+      {
+        "title": "Trimmed Mean CPI m/m",
+        "country": "AUD",
+        "impact": "High",
+        "time_utc": "2026-10-28T00:30:00+00:00",
+        "forecast": "0.3%",
+        "previous": "0.2%"
+      },
+      {
+        "title": "Official Cash Rate",
+        "country": "NZD",
+        "impact": "High",
+        "time_utc": "2026-10-28T01:00:00+00:00",
+        "forecast": "3.00%",
+        "previous": "2.75%"
+      },
+      {
+        "title": "RBNZ Rate Statement",
+        "country": "NZD",
+        "impact": "High",
+        "time_utc": "2026-10-28T01:00:00+00:00",
+        "forecast": "",
+        "previous": ""
+      },
+      {
+        "title": "RBNZ Press Conference",
+        "country": "NZD",
+        "impact": "High",
+        "time_utc": "2026-10-28T02:00:00+00:00",
+        "forecast": "",
+        "previous": ""
+      }
+    ],
+    "all_upcoming_next_window": [
+      {
+        "title": "BOJ Core CPI y/y",
+        "country": "JPY",
+        "impact": "Low",
+        "time_utc": "2026-10-27T05:00:00+00:00",
+        "forecast": "1.9%",
+        "previous": "1.8%"
+      },
+      {
+        "title": "Spanish Unemployment Rate",
+        "country": "EUR",
+        "impact": "Low",
+        "time_utc": "2026-10-27T08:00:00+00:00",
+        "forecast": "9.9%",
+        "previous": "9.9%"
+      },
+      {
+        "title": "M3 Money Supply y/y",
+        "country": "EUR",
+        "impact": "Low",
+        "time_utc": "2026-10-27T09:00:00+00:00",
+        "forecast": "3.5%",
+        "previous": "3.5%"
+      },
+      {
+        "title": "Private Loans y/y",
+        "country": "EUR",
+        "impact": "Low",
+        "time_utc": "2026-10-27T09:00:00+00:00",
+        "forecast": "3.1%",
+        "previous": "3.1%"
+      },
+      {
+        "title": "ADP Weekly Employment Change",
+        "country": "USD",
+        "impact": "Low",
+        "time_utc": "2026-10-27T12:15:00+00:00",
+        "forecast": "",
+        "previous": "18.5K"
+      },
+      {
+        "title": "Core Durable Goods Orders m/m",
+        "country": "USD",
+        "impact": "Low",
+        "time_utc": "2026-10-27T12:30:00+00:00",
+        "forecast": "0.6%",
+        "previous": "0.3%"
+      },
+      {
+        "title": "Durable Goods Orders m/m",
+        "country": "USD",
+        "impact": "Low",
+        "time_utc": "2026-10-27T12:30:00+00:00",
+        "forecast": "2.0%",
+        "previous": "0.0%"
+      },
+      {
+        "title": "HPI m/m",
+        "country": "USD",
+        "impact": "Low",
+        "time_utc": "2026-10-27T13:00:00+00:00",
+        "forecast": "0.2%",
+        "previous": "0.3%"
+      },
+      {
+        "title": "S&P/CS Composite-20 HPI y/y",
+        "country": "USD",
+        "impact": "Low",
+        "time_utc": "2026-10-27T13:00:00+00:00",
+        "forecast": "2.6%",
+        "previous": "2.5%"
+      },
+      {
+        "title": "CB Consumer Confidence",
+        "country": "USD",
+        "impact": "Medium",
+        "time_utc": "2026-10-27T14:00:00+00:00",
+        "forecast": "81.2",
+        "previous": "81.9"
+      },
+      {
+        "title": "New Home Sales",
+        "country": "USD",
+        "impact": "Low",
+        "time_utc": "2026-10-27T14:00:00+00:00",
+        "forecast": "651K",
+        "previous": "684K"
+      },
+      {
+        "title": "Richmond Manufacturing Index",
+        "country": "USD",
+        "impact": "Low",
+        "time_utc": "2026-10-27T14:00:00+00:00",
+        "forecast": "0",
+        "previous": "-2"
+      },
+      {
+        "title": "API Weekly Statistical Bulletin",
+        "country": "USD",
+        "impact": "Low",
+        "time_utc": "2026-10-27T20:30:00+00:00",
+        "forecast": "",
+        "previous": ""
+      },
+      {
+        "title": "RBA Gov Bullock Speaks",
+        "country": "AUD",
+        "impact": "Medium",
+        "time_utc": "2026-10-28T00:15:00+00:00",
+        "forecast": "",
+        "previous": ""
+      },
+      {
+        "title": "CPI m/m",
+        "country": "AUD",
+        "impact": "High",
+        "time_utc": "2026-10-28T00:30:00+00:00",
+        "forecast": "0.7%",
+        "previous": "0.4%"
+      },
+      {
+        "title": "CPI y/y",
+        "country": "AUD",
+        "impact": "High",
+        "time_utc": "2026-10-28T00:30:00+00:00",
+        "forecast": "4.2%",
+        "previous": "4.0%"
+      },
+      {
+        "title": "Trimmed Mean CPI m/m",
+        "country": "AUD",
+        "impact": "High",
+        "time_utc": "2026-10-28T00:30:00+00:00",
+        "forecast": "0.3%",
+        "previous": "0.2%"
+      },
+      {
+        "title": "Official Cash Rate",
+        "country": "NZD",
+        "impact": "High",
+        "time_utc": "2026-10-28T01:00:00+00:00",
+        "forecast": "3.00%",
+        "previous": "2.75%"
+      },
+      {
+        "title": "RBNZ Rate Statement",
+        "country": "NZD",
+        "impact": "High",
+        "time_utc": "2026-10-28T01:00:00+00:00",
+        "forecast": "",
+        "previous": ""
+      },
+      {
+        "title": "RBNZ Press Conference",
+        "country": "NZD",
+        "impact": "High",
+        "time_utc": "2026-10-28T02:00:00+00:00",
+        "forecast": "",
+        "previous": ""
+      }
+    ],
+    "window_hours": 24
+  },
+  "instruments": {
+    "NQ": {
+      "ok": true,
+      "ticker_used": "NQ=F",
+      "last_price": 29471.5,
+      "prior_day_high": 29326.0,
+      "prior_day_low": 28987.0,
+      "prior_day_close": 29117.75,
+      "pct_change_vs_prior_close": 1.2148946948167354,
+      "htf_trend_ema8_vs_ema21": "down",
+      "swing_high_liquidity_pool": 29589.5,
+      "swing_low_liquidity_pool": 29397.0,
+      "fair_value_gaps": {
+        "bullish_fvg": {
+          "gap_low": 29503.25,
+          "gap_high": 29511.0
+        },
+        "bearish_fvg": {
+          "gap_low": 29535.0,
+          "gap_high": 29538.75
+        }
+      },
+      "bias": "neutral",
+      "gamma_data": {
+        "available": false,
+        "note": "No manual gamma/options data provided for this run (no free API exists for call/put walls, gamma flip, net GEX, max pain, or OI). Bias below is price-action-only. Paste your morning data into data/manual_overrides.json to layer it in."
+      }
+    },
+    "DXY": {
+      "ok": true,
+      "ticker_used": "DX-Y.NYB",
+      "last_price": 102.01599884033203,
+      "prior_day_high": 101.8499984741211,
+      "prior_day_low": 101.48999786376953,
+      "prior_day_close": 101.80999755859375,
+      "pct_change_vs_prior_close": 0.2023389516532728,
+      "htf_trend_ema8_vs_ema21": "down",
+      "swing_high_liquidity_pool": 102.11599731445312,
+      "swing_low_liquidity_pool": 101.86499786376953,
+      "fair_value_gaps": {
+        "bullish_fvg": {
+          "gap_low": 102.03600311279297,
+          "gap_high": 102.04000091552734
+        },
+        "bearish_fvg": null
+      },
+      "bias": "neutral",
+      "gamma_data": {
+        "available": false,
+        "note": "DXY has no reliable options/gamma chain (thin ICE DX options market) - price action + macro/news only, by design."
+      }
+    },
+    "GC": {
+      "ok": true,
+      "ticker_used": "GC=F",
+      "last_price": 4022.699951171875,
+      "prior_day_high": 4050.199951171875,
+      "prior_day_low": 3989.10009765625,
+      "prior_day_close": 4007.89990234375,
+      "pct_change_vs_prior_close": 0.36927191768113243,
+      "htf_trend_ema8_vs_ema21": "down",
+      "swing_high_liquidity_pool": 4044.0,
+      "swing_low_liquidity_pool": 4016.699951171875,
+      "fair_value_gaps": {
+        "bullish_fvg": {
+          "gap_low": 4023.300048828125,
+          "gap_high": 4025.199951171875
+        },
+        "bearish_fvg": {
+          "gap_low": 4023.300048828125,
+          "gap_high": 4024.300048828125
+        }
+      },
+      "bias": "neutral",
+      "gamma_data": {
+        "available": false,
+        "note": "No manual gamma/options data provided for this run (no free API exists for call/put walls, gamma flip, net GEX, max pain, or OI). Bias below is price-action-only. Paste your morning data into data/manual_overrides.json to layer it in."
+      }
+    }
+  },
+  "yields": {
+    "TNX": {
+      "ok": true,
+      "last_yield": 4.986000061035156,
+      "prev_yield": 4.98799991607666,
+      "direction": "falling"
+    }
+  },
+  "confluence_notes": [
+    "10Y yield FALLING -> tailwind for Gold and NQ/growth, headwind for DXY.",
+    "DXY and Gold biases are inversely aligned (normal relationship) - supports higher-confidence conviction on both."
+  ],
+  "final_stance": "NEUTRAL / WAIT - mixed signals, let price confirm",
+  "full_watchlist": [
+    {
+      "key": "NQ",
+      "label": "Nasdaq 100 Futures",
+      "ok": true,
+      "ticker_used": "NQ=F",
+      "spot": 29472.75,
+      "bias": "neutral",
+      "levels": [
+        {
+          "name": "Prior Day High",
+          "value": 29326.0,
+          "distance": 146.75,
+          "swept_today": true
+        },
+        {
+          "name": "Prior Day Low",
+          "value": 28987.0,
+          "distance": 485.75,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Day Close",
+          "value": 29117.75,
+          "distance": 355.0,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Week High",
+          "value": 30113.0,
+          "distance": -640.25,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Week Low",
+          "value": 28987.0,
+          "distance": 485.75,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Week Close",
+          "value": 29117.75,
+          "distance": 355.0,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Month High",
+          "value": 31094.75,
+          "distance": -1622.0,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Month Low",
+          "value": 28763.75,
+          "distance": 709.0,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Month Close",
+          "value": 30698.75,
+          "distance": -1226.0,
+          "swept_today": false
+        }
+      ],
+      "headline": "Stock market today: Dow sinks 600 points, S&P 500, Nasdaq drop to cap a volatile week, oil prices rise"
+    },
+    {
+      "key": "DXY",
+      "label": "US Dollar Index",
+      "ok": true,
+      "ticker_used": "DX-Y.NYB",
+      "spot": 102.01599884033203,
+      "bias": "bullish",
+      "levels": [
+        {
+          "name": "Prior Day High",
+          "value": 101.8499984741211,
+          "distance": 0.1660003662109375,
+          "swept_today": true
+        },
+        {
+          "name": "Prior Day Low",
+          "value": 101.48999786376953,
+          "distance": 0.5260009765625,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Day Close",
+          "value": 101.80999755859375,
+          "distance": 0.20600128173828125,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Week High",
+          "value": 102.08000183105469,
+          "distance": -0.06400299072265625,
+          "swept_today": true
+        },
+        {
+          "name": "Prior Week Low",
+          "value": 101.44999694824219,
+          "distance": 0.5660018920898438,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Week Close",
+          "value": 101.80999755859375,
+          "distance": 0.20600128173828125,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Month High",
+          "value": 101.61000061035156,
+          "distance": 0.40599822998046875,
+          "swept_today": true
+        },
+        {
+          "name": "Prior Month Low",
+          "value": 98.5999984741211,
+          "distance": 3.4160003662109375,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Month Close",
+          "value": 101.44999694824219,
+          "distance": 0.5660018920898438,
+          "swept_today": false
+        }
+      ],
+      "headline": "Why the post-midterm market rally could fail"
+    },
+    {
+      "key": "GOLD_FUT",
+      "label": "Gold Futures",
+      "ok": true,
+      "ticker_used": "GC=F",
+      "spot": 4022.699951171875,
+      "bias": "neutral",
+      "levels": [
+        {
+          "name": "Prior Day High",
+          "value": 4050.199951171875,
+          "distance": -27.5,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Day Low",
+          "value": 3989.10009765625,
+          "distance": 33.599853515625,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Day Close",
+          "value": 4007.89990234375,
+          "distance": 14.800048828125,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Week High",
+          "value": 4211.2001953125,
+          "distance": -188.500244140625,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Week Low",
+          "value": 3989.10009765625,
+          "distance": 33.599853515625,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Week Close",
+          "value": 4007.89990234375,
+          "distance": 14.800048828125,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Month High",
+          "value": 4558.5,
+          "distance": -535.800048828125,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Month Low",
+          "value": 4143.10009765625,
+          "distance": -120.400146484375,
+          "swept_today": true
+        },
+        {
+          "name": "Prior Month Close",
+          "value": 4186.7001953125,
+          "distance": -164.000244140625,
+          "swept_today": false
+        }
+      ],
+      "headline": "Gold slips near $4,010 as traders await Fed decision, Iran diplomacy offers hope"
+    },
+    {
+      "key": "GOLD_SPOT",
+      "label": "Gold Spot",
+      "ok": true,
+      "ticker_used": "GC=F",
+      "spot": 4022.699951171875,
+      "bias": "neutral",
+      "levels": [
+        {
+          "name": "Prior Day High",
+          "value": 4050.199951171875,
+          "distance": -27.5,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Day Low",
+          "value": 3989.10009765625,
+          "distance": 33.599853515625,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Day Close",
+          "value": 4007.89990234375,
+          "distance": 14.800048828125,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Week High",
+          "value": 4211.2001953125,
+          "distance": -188.500244140625,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Week Low",
+          "value": 3989.10009765625,
+          "distance": 33.599853515625,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Week Close",
+          "value": 4007.89990234375,
+          "distance": 14.800048828125,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Month High",
+          "value": 4558.5,
+          "distance": -535.800048828125,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Month Low",
+          "value": 4143.10009765625,
+          "distance": -120.400146484375,
+          "swept_today": true
+        },
+        {
+          "name": "Prior Month Close",
+          "value": 4186.7001953125,
+          "distance": -164.000244140625,
+          "swept_today": false
+        }
+      ],
+      "headline": "Gold slips near $4,010 as traders await Fed decision, Iran diplomacy offers hope"
+    },
+    {
+      "key": "SILVER_FUT",
+      "label": "Silver Futures",
+      "ok": true,
+      "ticker_used": "SI=F",
+      "spot": 53.75,
+      "bias": "neutral",
+      "levels": [
+        {
+          "name": "Prior Day High",
+          "value": 53.71099853515625,
+          "distance": 0.03900146484375,
+          "swept_today": true
+        },
+        {
+          "name": "Prior Day Low",
+          "value": 53.71099853515625,
+          "distance": 0.03900146484375,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Day Close",
+          "value": 53.71099853515625,
+          "distance": 0.03900146484375,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Week High",
+          "value": 57.70600128173828,
+          "distance": -3.9560012817382812,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Week Low",
+          "value": 53.71099853515625,
+          "distance": 0.03900146484375,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Week Close",
+          "value": 53.71099853515625,
+          "distance": 0.03900146484375,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Month High",
+          "value": 68.1050033569336,
+          "distance": -14.355003356933594,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Month Low",
+          "value": 60.0,
+          "distance": -6.25,
+          "swept_today": true
+        },
+        {
+          "name": "Prior Month Close",
+          "value": 60.097999572753906,
+          "distance": -6.347999572753906,
+          "swept_today": false
+        }
+      ],
+      "headline": "RZOLV Reports 99.9% Silver Extraction from Solar-Panel Concentrate in Bench-Scale Testing"
+    },
+    {
+      "key": "SILVER_SPOT",
+      "label": "Silver Spot",
+      "ok": true,
+      "ticker_used": "SI=F",
+      "spot": 53.75,
+      "bias": "neutral",
+      "levels": [
+        {
+          "name": "Prior Day High",
+          "value": 53.71099853515625,
+          "distance": 0.03900146484375,
+          "swept_today": true
+        },
+        {
+          "name": "Prior Day Low",
+          "value": 53.71099853515625,
+          "distance": 0.03900146484375,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Day Close",
+          "value": 53.71099853515625,
+          "distance": 0.03900146484375,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Week High",
+          "value": 57.70600128173828,
+          "distance": -3.9560012817382812,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Week Low",
+          "value": 53.71099853515625,
+          "distance": 0.03900146484375,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Week Close",
+          "value": 53.71099853515625,
+          "distance": 0.03900146484375,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Month High",
+          "value": 68.1050033569336,
+          "distance": -14.355003356933594,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Month Low",
+          "value": 60.0,
+          "distance": -6.25,
+          "swept_today": true
+        },
+        {
+          "name": "Prior Month Close",
+          "value": 60.097999572753906,
+          "distance": -6.347999572753906,
+          "swept_today": false
+        }
+      ],
+      "headline": "RZOLV Reports 99.9% Silver Extraction from Solar-Panel Concentrate in Bench-Scale Testing"
+    },
+    {
+      "key": "OIL_FUT",
+      "label": "WTI Crude Oil Futures",
+      "ok": true,
+      "ticker_used": "CL=F",
+      "spot": 100.88999938964844,
+      "bias": "neutral",
+      "levels": [
+        {
+          "name": "Prior Day High",
+          "value": 103.91999816894531,
+          "distance": -3.029998779296875,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Day Low",
+          "value": 98.83999633789062,
+          "distance": 2.0500030517578125,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Day Close",
+          "value": 103.2699966430664,
+          "distance": -2.3799972534179688,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Week High",
+          "value": 110.4800033569336,
+          "distance": -9.590003967285156,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Week Low",
+          "value": 96.26000213623047,
+          "distance": 4.629997253417969,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Week Close",
+          "value": 103.2699966430664,
+          "distance": -2.3799972534179688,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Month High",
+          "value": 106.75,
+          "distance": -5.8600006103515625,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Month Low",
+          "value": 86.12999725341797,
+          "distance": 14.760002136230469,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Month Close",
+          "value": 90.41999816894531,
+          "distance": 10.470001220703125,
+          "swept_today": false
+        }
+      ],
+      "headline": "Oil extends losses as Iran mediation efforts ease escalation fears"
+    },
+    {
+      "key": "EURUSD",
+      "label": "EUR/USD",
+      "ok": true,
+      "ticker_used": "EURUSD=X",
+      "spot": 1.1174432039260864,
+      "bias": "bearish",
+      "levels": [
+        {
+          "name": "Prior Day High",
+          "value": 1.12271249294281,
+          "distance": -0.005269289016723633,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Day Low",
+          "value": 1.117468237876892,
+          "distance": -2.5033950805664062e-05,
+          "swept_today": true
+        },
+        {
+          "name": "Prior Day Close",
+          "value": 1.1217553615570068,
+          "distance": -0.00431215763092041,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Week High",
+          "value": 1.1259105205535889,
+          "distance": -0.008467316627502441,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Week Low",
+          "value": 1.1187058687210083,
+          "distance": -0.001262664794921875,
+          "swept_today": true
+        },
+        {
+          "name": "Prior Week Close",
+          "value": 1.1221455335617065,
+          "distance": -0.004702329635620117,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Month High",
+          "value": 1.1653653383255005,
+          "distance": -0.04792213439941406,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Month Low",
+          "value": 1.1328235864639282,
+          "distance": -0.015380382537841797,
+          "swept_today": true
+        },
+        {
+          "name": "Prior Month Close",
+          "value": 1.134082555770874,
+          "distance": -0.016639351844787598,
+          "swept_today": false
+        }
+      ],
+      "headline": "US Dollar Price Forecast: Five Central Banks Loom, DXY Holds 101.60 as EUR/USD, GBP/USD Coil"
+    },
+    {
+      "key": "GBPUSD",
+      "label": "GBP/USD",
+      "ok": true,
+      "ticker_used": "GBPUSD=X",
+      "spot": 1.3342761993408203,
+      "bias": "neutral",
+      "levels": [
+        {
+          "name": "Prior Day High",
+          "value": 1.3388673067092896,
+          "distance": -0.004591107368469238,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Day Low",
+          "value": 1.3329956531524658,
+          "distance": 0.0012805461883544922,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Day Close",
+          "value": 1.3377747535705566,
+          "distance": -0.003498554229736328,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Week High",
+          "value": 1.3417415618896484,
+          "distance": -0.007465362548828125,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Week Low",
+          "value": 1.330477237701416,
+          "distance": 0.003798961639404297,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Week Close",
+          "value": 1.3403927087783813,
+          "distance": -0.006116509437561035,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Month High",
+          "value": 1.3570362329483032,
+          "distance": -0.02276003360748291,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Month Low",
+          "value": 1.3203411102294922,
+          "distance": 0.013935089111328125,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Month Close",
+          "value": 1.323276400566101,
+          "distance": 0.010999798774719238,
+          "swept_today": false
+        }
+      ],
+      "headline": "US Dollar Price Forecast: Five Central Banks Loom, DXY Holds 101.60 as EUR/USD, GBP/USD Coil"
+    },
+    {
+      "key": "USDJPY",
+      "label": "USD/JPY",
+      "ok": true,
+      "ticker_used": "USDJPY=X",
+      "spot": 157.6269989013672,
+      "bias": "neutral",
+      "levels": [
+        {
+          "name": "Prior Day High",
+          "value": 157.6269989013672,
+          "distance": 0.0,
+          "swept_today": true
+        },
+        {
+          "name": "Prior Day Low",
+          "value": 156.65699768066406,
+          "distance": 0.970001220703125,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Day Close",
+          "value": 156.8300018310547,
+          "distance": 0.7969970703125,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Week High",
+          "value": 158.5919952392578,
+          "distance": -0.964996337890625,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Week Low",
+          "value": 156.0959930419922,
+          "distance": 1.531005859375,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Week Close",
+          "value": 156.49400329589844,
+          "distance": 1.13299560546875,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Month High",
+          "value": 160.38299560546875,
+          "distance": -2.7559967041015625,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Month Low",
+          "value": 152.89700317382812,
+          "distance": 4.7299957275390625,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Month Close",
+          "value": 157.4040069580078,
+          "distance": 0.222991943359375,
+          "swept_today": false
+        }
+      ],
+      "headline": "No headline available"
+    },
+    {
+      "key": "BTC",
+      "label": "Bitcoin",
+      "ok": true,
+      "ticker_used": "BTC-USD",
+      "spot": 79935.7578125,
+      "bias": "bearish",
+      "levels": [
+        {
+          "name": "Prior Day High",
+          "value": 80928.265625,
+          "distance": -992.5078125,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Day Low",
+          "value": 79766.828125,
+          "distance": 168.9296875,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Day Close",
+          "value": 80024.0078125,
+          "distance": -88.25,
+          "swept_today": true
+        },
+        {
+          "name": "Prior Week High",
+          "value": 84840.046875,
+          "distance": -4904.2890625,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Week Low",
+          "value": 80421.7421875,
+          "distance": -485.984375,
+          "swept_today": true
+        },
+        {
+          "name": "Prior Week Close",
+          "value": 81074.1875,
+          "distance": -1138.4296875,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Month High",
+          "value": 87363.7578125,
+          "distance": -7428.0,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Month Low",
+          "value": 74944.59375,
+          "distance": 4991.1640625,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Month Close",
+          "value": 83553.8515625,
+          "distance": -3618.09375,
+          "swept_today": false
+        }
+      ],
+      "headline": "10,000 Bitcoin Simulations Say BTC's Median Path to $1M Comes in 2033"
+    },
+    {
+      "key": "US10Y_YIELD",
+      "label": "US 10-Year Treasury Yield",
+      "ok": true,
+      "ticker_used": "^TNX",
+      "spot": 4.986000061035156,
+      "bias": "bearish",
+      "levels": [
+        {
+          "name": "Prior Day High",
+          "value": 5.002999782562256,
+          "distance": -0.01699972152709961,
+          "swept_today": true
+        },
+        {
+          "name": "Prior Day Low",
+          "value": 4.954999923706055,
+          "distance": 0.031000137329101562,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Day Close",
+          "value": 4.98799991607666,
+          "distance": -0.0019998550415039062,
+          "swept_today": true
+        },
+        {
+          "name": "Prior Week High",
+          "value": 5.150000095367432,
+          "distance": -0.1640000343322754,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Week Low",
+          "value": 4.939000129699707,
+          "distance": 0.04699993133544922,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Week Close",
+          "value": 4.98799991607666,
+          "distance": -0.0019998550415039062,
+          "swept_today": true
+        },
+        {
+          "name": "Prior Month High",
+          "value": 5.306000232696533,
+          "distance": -0.32000017166137695,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Month Low",
+          "value": 4.73199987411499,
+          "distance": 0.254000186920166,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Month Close",
+          "value": 5.293000221252441,
+          "distance": -0.30700016021728516,
+          "swept_today": false
+        }
+      ],
+      "headline": "Stocks extend declines, 10-year Treasury holds below 5%: AlphaCheck"
+    },
+    {
+      "key": "US10Y_NOTE_FUT",
+      "label": "US 10-Year T-Note Futures",
+      "ok": true,
+      "ticker_used": "ZN=F",
+      "spot": 106.1875,
+      "bias": "bullish",
+      "levels": [
+        {
+          "name": "Prior Day High",
+          "value": 106.453125,
+          "distance": -0.265625,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Day Low",
+          "value": 106.03125,
+          "distance": 0.15625,
+          "swept_today": true
+        },
+        {
+          "name": "Prior Day Close",
+          "value": 106.15625,
+          "distance": 0.03125,
+          "swept_today": true
+        },
+        {
+          "name": "Prior Week High",
+          "value": 106.515625,
+          "distance": -0.328125,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Week Low",
+          "value": 105.046875,
+          "distance": 1.140625,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Week Close",
+          "value": 106.15625,
+          "distance": 0.03125,
+          "swept_today": true
+        },
+        {
+          "name": "Prior Month High",
+          "value": 108.125,
+          "distance": -1.9375,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Month Low",
+          "value": 104.125,
+          "distance": 2.0625,
+          "swept_today": false
+        },
+        {
+          "name": "Prior Month Close",
+          "value": 104.203125,
+          "distance": 1.984375,
+          "swept_today": false
+        }
+      ],
+      "headline": "Treasury yields continue to rise as Wall Street calls out Fed's 'inflation credibility shock'"
+    }
+  ],
+  "top_setups": [
+    {
+      "key": "EURUSD",
+      "label": "EUR/USD",
+      "bias": "bearish",
+      "spot": 1.1174432039260864,
+      "target_level": "Prior Day Close",
+      "target_value": 1.1217553615570068,
+      "distance": -0.00431215763092041
+    },
+    {
+      "key": "US10Y_YIELD",
+      "label": "US 10-Year Treasury Yield",
+      "bias": "bearish",
+      "spot": 4.986000061035156,
+      "target_level": "Prior Day Low",
+      "target_value": 4.954999923706055,
+      "distance": 0.031000137329101562
+    }
+  ]
+}
