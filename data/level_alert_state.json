@@ -2,7 +2,10 @@
   "date": "2026-10-28",
   "triggered": {
     "NQ": [],
-    "DXY": [],
+    "DXY": [
+      "Prior Day High",
+      "Prior Day Close"
+    ],
     "GOLD_FUT": [],
     "GOLD_SPOT": [],
     "SILVER_FUT": [
@@ -29,7 +32,8 @@
     "BTC": [],
     "US10Y_YIELD": [],
     "US10Y_NOTE_FUT": [
-      "Prior Day Low"
+      "Prior Day Low",
+      "Prior Day Close"
     ]
   }
 }
