@@ -29,7 +29,9 @@
     "USDJPY": [
       "Prior Day High"
     ],
-    "BTC": [],
+    "BTC": [
+      "Prior Week Low"
+    ],
     "US10Y_YIELD": [],
     "US10Y_NOTE_FUT": [
       "Prior Day Low",
