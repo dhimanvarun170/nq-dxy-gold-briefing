@@ -1,12 +1,18 @@
 {
   "date": "2026-10-29",
   "triggered": {
-    "NQ": [],
+    "NQ": [
+      "Prior Day Low"
+    ],
     "DXY": [
       "Prior Day Close"
     ],
-    "GOLD_FUT": [],
-    "GOLD_SPOT": [],
+    "GOLD_FUT": [
+      "Prior Day Low"
+    ],
+    "GOLD_SPOT": [
+      "Prior Day Low"
+    ],
     "SILVER_FUT": [
       "Prior Day Low"
     ],
@@ -30,7 +36,8 @@
     ],
     "US10Y_YIELD": [],
     "US10Y_NOTE_FUT": [
-      "Prior Day Low"
+      "Prior Day Low",
+      "Prior Day High"
     ]
   }
 }
