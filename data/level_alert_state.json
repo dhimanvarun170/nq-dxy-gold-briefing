@@ -4,7 +4,8 @@
     "NQ": [],
     "DXY": [
       "Prior Week Close",
-      "Prior Day Low"
+      "Prior Day Low",
+      "Prior Day Close"
     ],
     "GOLD_FUT": [
       "Prior Week Close"
