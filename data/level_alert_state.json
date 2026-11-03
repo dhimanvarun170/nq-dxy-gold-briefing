@@ -36,7 +36,8 @@
       "Prior Week Close",
       "Prior Month Close",
       "Prior Week High",
-      "Prior Month High"
+      "Prior Month High",
+      "Prior Day Low"
     ]
   }
 }
