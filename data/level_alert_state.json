@@ -26,14 +26,17 @@
     "USDJPY": [
       "Prior Day High",
       "Prior Week Close",
-      "Prior Month Close"
+      "Prior Month Close",
+      "Prior Week High"
     ],
     "BTC": [],
     "US10Y_YIELD": [],
     "US10Y_NOTE_FUT": [
       "Prior Day Close",
       "Prior Week Close",
-      "Prior Month Close"
+      "Prior Month Close",
+      "Prior Week High",
+      "Prior Month High"
     ]
   }
 }
