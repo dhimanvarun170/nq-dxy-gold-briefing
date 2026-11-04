@@ -5,7 +5,8 @@
       "Prior Day High"
     ],
     "DXY": [
-      "Prior Day Low"
+      "Prior Day Low",
+      "Prior Month Low"
     ],
     "GOLD_FUT": [],
     "GOLD_SPOT": [],
@@ -28,7 +29,8 @@
       "Prior Week High",
       "Prior Month High",
       "Prior Week Close",
-      "Prior Month Close"
+      "Prior Month Close",
+      "Prior Day High"
     ]
   }
 }
