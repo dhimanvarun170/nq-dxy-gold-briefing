@@ -7,8 +7,12 @@
       "Prior Week Low",
       "Prior Month Low"
     ],
-    "GOLD_FUT": [],
-    "GOLD_SPOT": [],
+    "GOLD_FUT": [
+      "Prior Week High"
+    ],
+    "GOLD_SPOT": [
+      "Prior Week High"
+    ],
     "SILVER_FUT": [],
     "SILVER_SPOT": [],
     "OIL_FUT": [],
@@ -20,7 +24,8 @@
       "Prior Week Close",
       "Prior Month Close",
       "Prior Day Close",
-      "Prior Week High"
+      "Prior Week High",
+      "Prior Day Low"
     ],
     "BTC": [
       "Prior Day Close",
