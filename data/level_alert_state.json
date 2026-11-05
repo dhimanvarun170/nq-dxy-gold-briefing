@@ -23,7 +23,8 @@
       "Prior Week High"
     ],
     "BTC": [
-      "Prior Day Close"
+      "Prior Day Close",
+      "Prior Day Low"
     ],
     "US10Y_YIELD": [
       "Prior Day Low"
