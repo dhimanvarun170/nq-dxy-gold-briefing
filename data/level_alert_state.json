@@ -15,10 +15,14 @@
     "SILVER_SPOT": [],
     "OIL_FUT": [],
     "EURUSD": [
-      "Prior Month Close"
+      "Prior Month Close",
+      "Prior Day High",
+      "Prior Day Close",
+      "Prior Week Close"
     ],
     "GBPUSD": [
-      "Prior Month Close"
+      "Prior Month Close",
+      "Prior Month High"
     ],
     "USDJPY": [
       "Prior Day Close",
