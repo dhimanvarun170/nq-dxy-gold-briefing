@@ -1,14 +1,14 @@
-📊 NY Pre-Session — 2026-11-12
+📊 Asia Pre-Session — 2026-11-13
 
-NQ: BEARISH (28,360.25)
-DXY: BULLISH (103.18)
-Gold: BEARISH (3,888.60)
+NQ: BEARISH (28,437.00)
+DXY: BULLISH (103.15)
+Gold: BEARISH (3,919.80)
 10Y yield: RISING
 
 FINAL STANCE: BEARISH (risk-off lean)
 
-Full report: https://github.com/dhimanvarun170/nq-dxy-gold-briefing/blob/main/reports/2026-11-12-ny.md
+Full report: https://github.com/dhimanvarun170/nq-dxy-gold-briefing/blob/main/reports/2026-11-13-asia.md
 
 Top setups:
-- EUR/USD: BEARISH -> Prior Day Close (-0.01 away)
-- US Dollar Index: BULLISH -> Prior Week Close (+0.88 away)
+- GBP/USD: BEARISH -> Prior Day Low (+0.00 away)
+- EUR/USD: BEARISH -> Prior Day Close (-0.00 away)
