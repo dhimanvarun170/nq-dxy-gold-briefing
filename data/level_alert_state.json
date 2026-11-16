@@ -9,10 +9,12 @@
       "Prior Week Close"
     ],
     "GOLD_FUT": [
-      "Prior Month Low"
+      "Prior Month Low",
+      "Prior Week Low"
     ],
     "GOLD_SPOT": [
-      "Prior Month Low"
+      "Prior Month Low",
+      "Prior Week Low"
     ],
     "SILVER_FUT": [],
     "SILVER_SPOT": [],
@@ -30,7 +32,9 @@
     "USDJPY": [
       "Prior Day Low"
     ],
-    "BTC": [],
+    "BTC": [
+      "Prior Day Close"
+    ],
     "US10Y_YIELD": [],
     "US10Y_NOTE_FUT": [
       "Prior Day Close",
