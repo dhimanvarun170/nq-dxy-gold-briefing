@@ -4,13 +4,18 @@
     "NQ": [],
     "DXY": [
       "Prior Day High",
-      "Prior Week High"
+      "Prior Week High",
+      "Prior Day Close"
     ],
     "GOLD_FUT": [
-      "Prior Day Low"
+      "Prior Day Low",
+      "Prior Day Close",
+      "Prior Week Low"
     ],
     "GOLD_SPOT": [
-      "Prior Day Low"
+      "Prior Day Low",
+      "Prior Day Close",
+      "Prior Week Low"
     ],
     "SILVER_FUT": [],
     "SILVER_SPOT": [],
@@ -19,7 +24,9 @@
       "Prior Day Low"
     ],
     "GBPUSD": [
-      "Prior Day Low"
+      "Prior Day Low",
+      "Prior Day Close",
+      "Prior Week Low"
     ],
     "USDJPY": [
       "Prior Day Low"
