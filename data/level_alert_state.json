@@ -25,6 +25,8 @@
     "US10Y_YIELD": [
       "Prior Day Low"
     ],
-    "US10Y_NOTE_FUT": []
+    "US10Y_NOTE_FUT": [
+      "Prior Month Close"
+    ]
   }
 }
