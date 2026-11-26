@@ -1,4 +1,4 @@
-📊 Asia Pre-Session — 2026-11-26
+📊 NY Pre-Session — 2026-11-26
 
 NQ: NEUTRAL (26,389.75)
 DXY: BULLISH (103.81)
@@ -7,7 +7,7 @@ Gold: NEUTRAL (3,620.40)
 
 FINAL STANCE: NEUTRAL / WAIT - mixed signals, let price confirm
 
-Full report: https://github.com/dhimanvarun170/nq-dxy-gold-briefing/blob/main/reports/2026-11-26-asia.md
+Full report: https://github.com/dhimanvarun170/nq-dxy-gold-briefing/blob/main/reports/2026-11-26-ny.md
 
 Top setups:
 - GBP/USD: BEARISH -> Prior Week Close (+0.00 away)
